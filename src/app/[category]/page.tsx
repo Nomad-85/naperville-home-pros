@@ -8,7 +8,7 @@ import CTASection from '@/components/CTASection';
 import categories from '@/data/categories.json';
 import listings from '@/data/listings.json';
 import { SEO_CONSTANTS } from '@/lib/seo';
-import { buildMetadata } from '@/components/SchemaMetadata';
+import { buildMetadata, buildViewport } from '@/components/SchemaMetadata';
 
 interface CategoryPageProps {
   params: {
@@ -39,6 +39,15 @@ export async function generateMetadata({ params }: CategoryPageProps) {
     ogType: 'website'
   });
 }
+
+// Generate viewport for each category page
+export const viewport = buildViewport({
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 2,
+  userScalable: true,
+  themeColor: '#0f766e'
+});
 
 // Generate static paths for all categories
 export async function generateStaticParams() {

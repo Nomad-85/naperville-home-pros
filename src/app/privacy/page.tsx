@@ -2,13 +2,21 @@ import React from 'react';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { JsonLd } from '@/components/JsonLd';
 import { SEO_CONSTANTS } from '@/lib/seo';
-import { buildMetadata } from '@/components/SchemaMetadata';
+import { buildMetadata, buildViewport } from '@/components/SchemaMetadata';
 
 export const metadata = buildMetadata({
   title: 'Privacy Policy | Naperville Home Pros',
   description: 'Our privacy policy explains how we collect, use, and protect your personal information when you use the Naperville Home Pros directory.',
   path: '/privacy',
   ogType: 'website'
+});
+
+export const viewport = buildViewport({
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 2,
+  userScalable: true,
+  themeColor: '#0f766e'
 });
 
 export default function PrivacyPage() {

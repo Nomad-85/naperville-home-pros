@@ -1,5 +1,5 @@
 import React from 'react';
-import { Metadata } from 'next';
+import { Metadata, Viewport } from 'next';
 import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { JsonLd } from '@/components/JsonLd';
@@ -8,6 +8,14 @@ import { SEO_CONSTANTS } from '@/lib/seo';
 export const metadata: Metadata = {
   title: 'Add Your Business | Naperville Home Pros',
   description: 'List your home service business in our Naperville & Wheaton directory. Reach local customers looking for your services and grow your business.',
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 2,
+  userScalable: true,
+  themeColor: '#0f766e'
 };
 
 export default function AddYourBusinessPage() {

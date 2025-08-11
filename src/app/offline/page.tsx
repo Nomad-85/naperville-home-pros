@@ -1,11 +1,21 @@
 import React from 'react';
-import { Metadata } from 'next';
+import { Metadata, Viewport } from 'next';
 import Link from 'next/link';
+import { buildViewport } from '@/components/SchemaMetadata';
+import OfflineButton from '@/components/OfflineButton';
 
 export const metadata: Metadata = {
   title: 'Offline | Naperville Home Pros',
   description: 'You are currently offline. Some features may be unavailable.',
 };
+
+export const viewport = buildViewport({
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 2,
+  userScalable: true,
+  themeColor: '#0f766e'
+});
 
 export default function OfflinePage() {
   return (
@@ -37,12 +47,7 @@ export default function OfflinePage() {
               Any cached pages you&apos;ve previously visited should still work.
             </p>
             <div className="space-y-3">
-              <button
-                onClick={() => window.location.reload()}
-                className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
-              >
-                Try Again
-              </button>
+              <OfflineButton />
               <Link
                 href="/"
                 className="w-full flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"

@@ -2,13 +2,21 @@ import React from 'react';
 import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import StructuredData from '@/components/StructuredData';
-import { buildMetadata } from '@/components/SchemaMetadata';
+import { buildMetadata, buildViewport } from '@/components/SchemaMetadata';
 
 export const metadata = buildMetadata({
   title: 'Accessibility Statement | Naperville Home Pros',
   description: 'Our commitment to accessibility for all users of the Naperville Home Pros directory.',
   path: '/accessibility',
   ogType: 'website'
+});
+
+export const viewport = buildViewport({
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 2,
+  userScalable: true,
+  themeColor: '#0f766e'
 });
 
 export default function AccessibilityPage() {

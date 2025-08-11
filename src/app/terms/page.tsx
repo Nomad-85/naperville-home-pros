@@ -2,13 +2,21 @@ import React from 'react';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { JsonLd } from '@/components/JsonLd';
 import { SEO_CONSTANTS } from '@/lib/seo';
-import { buildMetadata } from '@/components/SchemaMetadata';
+import { buildMetadata, buildViewport } from '@/components/SchemaMetadata';
 
 export const metadata = buildMetadata({
   title: 'Terms of Service | Naperville Home Pros',
   description: 'Our terms of service outline the rules, guidelines, and legal terms that govern your use of the Naperville Home Pros directory.',
   path: '/terms',
   ogType: 'website'
+});
+
+export const viewport = buildViewport({
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 2,
+  userScalable: true,
+  themeColor: '#0f766e'
 });
 
 export default function TermsPage() {

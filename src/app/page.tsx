@@ -8,13 +8,21 @@ import { JsonLd } from '@/components/JsonLd';
 import categories from '@/data/categories.json';
 import listings from '@/data/listings.json';
 import { SEO_CONSTANTS } from '@/lib/seo';
-import { buildMetadata } from '@/components/SchemaMetadata';
+import { buildMetadata, buildViewport } from '@/components/SchemaMetadata';
 
 export const metadata = buildMetadata({
   title: 'Home Service Pros in Naperville & Wheaton | Naperville Home Pros',
   description: 'Find trusted plumbers, electricians, roofers & more. Compare top local pros in Naperville & Wheaton. Feature your business today.',
   path: '/',
   ogType: 'website'
+});
+
+export const viewport = buildViewport({
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 2,
+  userScalable: true,
+  themeColor: '#0f766e'
 });
 
 export default function Home() {
