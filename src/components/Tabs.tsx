@@ -72,7 +72,7 @@ export const Tabs: React.FC<TabsProps> = ({
           ref={tabsRef}
           role="tablist"
           aria-label={ariaLabel}
-          className="flex border-b border-gray-200 mb-4 overflow-x-auto scrollbar-hide"
+          className="flex border-b border-gray-200"
         >
           {tabs.map((tab) => {
             const isActive = activeTabId === tab.id;
@@ -90,10 +90,10 @@ export const Tabs: React.FC<TabsProps> = ({
                 onClick={() => handleTabClick(tab.id)}
                 onKeyDown={(e) => handleKeyDown(e, tab.id)}
                 className={`
-                  px-5 py-3 font-medium text-sm md:text-base focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 transition-colors duration-200 whitespace-nowrap
+                  px-4 py-2 font-medium text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2
                   ${isActive 
-                    ? `text-primary-600 border-b-2 border-primary-600 ${activeTabClassName}` 
-                    : `text-gray-600 hover:text-primary-500 hover:border-gray-300 ${tabClassName}`
+                    ? `text-primary-600 border-b-2 border-primary-500 ${activeTabClassName}` 
+                    : `text-gray-500 hover:text-gray-700 hover:border-gray-300 ${tabClassName}`
                   }
                 `}
               >
@@ -107,7 +107,7 @@ export const Tabs: React.FC<TabsProps> = ({
         </div>
       </KeyboardNavigation>
 
-      <div className={`tab-panels ${tabContentClassName}`}>
+      <div className={`tab-panels mt-4 ${tabContentClassName}`}>
         {tabs.map((tab) => {
           const isActive = activeTabId === tab.id;
           const tabId = `${tabsId.current}-tab-${tab.id}`;
@@ -121,7 +121,7 @@ export const Tabs: React.FC<TabsProps> = ({
               aria-labelledby={tabId}
               hidden={!isActive}
               tabIndex={0}
-              className={`focus:outline-none animate-fadeIn ${isActive ? 'block' : 'hidden'}`}
+              className={`focus:outline-none ${isActive ? 'block' : 'hidden'}`}
             >
               {tab.content}
             </div>

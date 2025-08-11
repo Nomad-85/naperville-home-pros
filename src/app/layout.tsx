@@ -38,7 +38,6 @@ export const viewport = buildViewport({
 })
 
 import { Providers } from './providers';
-import Container from '@/components/Container';
 
 export default function RootLayout({
   children,
@@ -66,7 +65,7 @@ export default function RootLayout({
           <SkipLink targetId="main-content" />
           
           <Header />
-          <main id="main-content" className="min-h-screen py-6 md:py-8">
+          <main id="main-content" className="min-h-screen">
             {children}
           </main>
           <Footer />

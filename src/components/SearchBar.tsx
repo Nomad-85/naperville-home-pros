@@ -104,15 +104,15 @@ export default function SearchBar({
   };
 
   return (
-    <div ref={searchRef} className={`relative ${className} animate-fadeIn`}>
+    <div ref={searchRef} className={`relative ${className}`}>
       <form onSubmit={handleSubmit} role="search">
         <label htmlFor="search" className="sr-only">
           Search
         </label>
         <div className="relative">
-          <div className="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none">
+          <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
             <svg
-              className="w-5 h-5 text-gray-500"
+              className="w-4 h-4 text-gray-500"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -130,7 +130,7 @@ export default function SearchBar({
           <input
             type="search"
             id="search"
-            className="block w-full p-4 pl-12 text-base text-gray-900 border border-gray-300 rounded-lg bg-white focus:ring-primary-500 focus:border-primary-500 focus:outline-none transition-colors duration-200 shadow-sm hover:shadow"
+            className="block w-full p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-white focus:ring-primary-500 focus:border-primary-500"
             placeholder={placeholder}
             value={query}
             onChange={handleInputChange}
@@ -142,7 +142,7 @@ export default function SearchBar({
           />
           <button
             type="submit"
-            className="absolute right-2.5 bottom-2 top-2 px-4 text-sm font-medium text-white bg-primary-600 rounded-lg hover:bg-primary-500 focus:ring-2 focus:outline-none focus:ring-primary-300 transition-all duration-200 shadow-md hover:shadow-lg active:scale-95"
+            className="absolute right-2 bottom-1.5 top-1.5 px-2 text-sm font-medium text-white bg-primary-600 rounded-lg hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300"
           >
             <span className="sr-only">Search</span>
             <svg
@@ -168,13 +168,13 @@ export default function SearchBar({
       {isOpen && (
         <div
           id="search-results"
-          className="absolute z-10 w-full mt-2 bg-white border border-gray-200 rounded-lg shadow-xl overflow-hidden animate-fadeIn max-h-[80vh] overflow-y-auto animate-slideInUp"
+          className="absolute z-10 w-full mt-1 bg-white border border-gray-200 rounded-md shadow-lg"
           role="listbox"
         >
           {isLoading ? (
-            <div className="p-6 text-center text-gray-500">
-              <div className="inline-block h-7 w-7 animate-spin rounded-full border-3 border-solid border-primary-500 border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"></div>
-              <span className="ml-3 text-base">Searching...</span>
+            <div className="p-4 text-center text-gray-500">
+              <div className="inline-block h-6 w-6 animate-spin rounded-full border-2 border-solid border-primary-500 border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"></div>
+              <span className="ml-2">Searching...</span>
             </div>
           ) : results.length > 0 ? (
             <ul>
@@ -182,38 +182,30 @@ export default function SearchBar({
                 <li key={result.id} className="border-b border-gray-100 last:border-b-0">
                   <Link
                     href={`/${result.categorySlug}/${result.slug}`}
-                    className="block p-5 hover:bg-primary-50 transition-colors hover:shadow-inner"
+                    className="block p-3 hover:bg-gray-50"
                     onClick={() => setIsOpen(false)}
                   >
-                    <div className="font-medium text-primary-600 hover:text-primary-700 transition-colors text-lg mb-1">{result.name}</div>
-                    <div className="text-sm font-medium text-gray-500 mb-2">
-                      <span className="inline-flex items-center px-2.5 py-1 rounded-md bg-gray-100 text-gray-800 mr-1 text-xs font-medium">
-                        {result.category}
-                      </span>
+                    <div className="font-medium text-primary-600">{result.name}</div>
+                    <div className="text-xs text-gray-500 mb-1">
+                      Category: {result.category}
                     </div>
                     <p className="text-sm text-gray-700 line-clamp-2">{result.description}</p>
                   </Link>
                 </li>
               ))}
-              <li className="p-4 bg-gray-50 text-center border-t border-gray-100 hover:bg-gray-100 transition-colors">
+              <li className="p-2 bg-gray-50 text-center">
                 <Link
                   href={`/search?q=${encodeURIComponent(query)}`}
-                  className="text-base font-medium text-primary-600 hover:text-primary-700 transition-colors flex items-center justify-center hover:underline"
+                  className="text-sm text-primary-600 hover:underline"
                   onClick={() => setIsOpen(false)}
                 >
                   View all results
-                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                  </svg>
                 </Link>
               </li>
             </ul>
           ) : query.length >= 2 ? (
-            <div className="p-8 text-center text-gray-500">
-              <svg className="w-8 h-8 mx-auto mb-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-              </svg>
-              <p className="text-base">No results found for <span className="font-medium">&quot;{query}&quot;</span></p>
+            <div className="p-4 text-center text-gray-500">
+              No results found for &quot;{query}&quot;
             </div>
           ) : null}
         </div>

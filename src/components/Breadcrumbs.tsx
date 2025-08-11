@@ -11,27 +11,18 @@ export interface BreadcrumbItem {
 
 interface BreadcrumbsProps {
   items: BreadcrumbItem[];
-  className?: string;
-  showBackground?: boolean;
 }
 
-const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ 
-  items, 
-  className = '',
-  showBackground = false 
-}) => {
+const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ items }) => {
   return (
-    <nav 
-      aria-label="Breadcrumb" 
-      className={`py-3 md:py-4 mb-2 ${showBackground ? 'bg-gray-50 px-4 rounded-lg' : ''} ${className} animate-fadeIn`}
-    >
-      <ol className="flex flex-wrap items-center space-x-1 md:space-x-2 text-sm md:text-base text-gray-600 overflow-x-auto scrollbar-hide">
+    <nav aria-label="Breadcrumb" className="py-3">
+      <ol className="flex flex-wrap items-center space-x-1 text-sm text-gray-500">
         {items.map((item, index) => (
           <React.Fragment key={item.href}>
             {index > 0 && (
               <li className="flex items-center">
                 <svg
-                  className="w-3 h-3 mx-1 text-gray-400 flex-shrink-0"
+                  className="w-4 h-4 text-gray-400"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -48,13 +39,13 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = ({
             )}
             <li>
               {item.isCurrent ? (
-                <span className="font-medium text-gray-900 md:font-semibold truncate max-w-[200px] md:max-w-xs flex-shrink-0" aria-current="page">
+                <span className="font-medium text-gray-900" aria-current="page">
                   {item.label}
                 </span>
               ) : (
                 <Link
                   href={item.href}
-                  className="text-primary-600 hover:text-primary-500 hover:underline transition-colors truncate max-w-[150px] md:max-w-xs inline-block flex-shrink-0"
+                  className="hover:text-primary-600 hover:underline"
                 >
                   {item.label}
                 </Link>

@@ -1,9 +1,7 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import Image from 'next/image';
-
-type ObjectFitType = 'contain' | 'cover' | 'fill' | 'none' | 'scale-down';
 
 interface OptimizedImageProps {
   src: string;
@@ -14,10 +12,7 @@ interface OptimizedImageProps {
   priority?: boolean;
   sizes?: string;
   fill?: boolean;
-  objectFit?: ObjectFitType;
-  fallbackSrc?: string;
-  aspectRatio?: string;
-  rounded?: boolean;
+  objectFit?: 'contain' | 'cover' | 'fill' | 'none' | 'scale-down';
 }
 
 export default function OptimizedImage({
@@ -30,54 +25,33 @@ export default function OptimizedImage({
   sizes = '100vw',
   fill = false,
   objectFit = 'cover',
-  fallbackSrc = '/static/placeholders/listing.jpg',
-  aspectRatio = '16/9',
-  rounded = true,
 }: OptimizedImageProps) {
   // Handle external URLs vs local images
-  const isExternal = src && src.startsWith('http');
+  const isExternal = src.startsWith('http');
   
   // Default placeholder blur for better LCP
   const blurDataURL = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAFdgJCIEHr+AAAAABJRU5ErkJggg==';
   
-  // Handle missing or broken image URLs
-  const [imgSrc, setImgSrc] = useState<string>(src || fallbackSrc);
-  
-  // Handle image error
-  const handleImageError = () => {
-    setImgSrc(fallbackSrc);
-  };
-  
-  // Explicitly handle the fill prop to avoid TypeScript errors
-  const fillProp = fill === true ? true : undefined;
-  
-  // Handle object-fit style
-  const imageStyle: React.CSSProperties = {
-    maxWidth: '100%',
-    height: fill ? '100%' : 'auto',
-    objectFit: objectFit as any
-  };
-  
   return (
-    <div 
-      className={`relative ${className} ${rounded ? 'rounded-lg overflow-hidden' : ''}`}
-      style={{ aspectRatio: fill ? undefined : aspectRatio }}
-    >
+    <div className={`relative ${className}`} style={{ overflow: 'hidden' }}>
       <Image
-        src={imgSrc}
+        src={src}
         alt={alt}
         width={fill ? undefined : (width || 800)}
         height={fill ? undefined : (height || 600)}
-        className={`${fill ? 'object-' + objectFit : ''} ${rounded ? 'rounded-lg' : ''} transition-opacity duration-300`}
+        className={`${fill ? 'object-' + objectFit : ''}`}
         priority={priority}
         sizes={sizes}
-        fill={fillProp}
+        fill={fill}
         placeholder="blur"
         blurDataURL={blurDataURL}
         loading={priority ? 'eager' : 'lazy'}
-        style={imageStyle}
+        style={{ 
+          maxWidth: '100%',
+          height: fill ? '100%' : 'auto',
+          objectFit: objectFit
+        }}
         unoptimized={isExternal}
-        onError={handleImageError}
       />
     </div>
   );
