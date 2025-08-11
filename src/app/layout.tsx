@@ -104,11 +104,13 @@ export default function RootLayout({
           </Script>
           
           {/* Service worker registration for offline support */}
-          <Script 
+          {/* Using standard script tag instead of Next.js Script component to avoid type errors */}
+          <script 
             id="register-sw"
             src="/register-sw.js"
-            strategy="lazyOnload"
-          />
+            async
+            defer
+          ></script>
           
           {/* Connection status indicator */}
           <div 
