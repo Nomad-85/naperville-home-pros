@@ -3,21 +3,13 @@ import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { JsonLd } from '@/components/JsonLd';
 import { SEO_CONSTANTS } from '@/lib/seo';
-import { buildMetadata, buildViewport } from '@/components/SchemaMetadata';
+import { buildMetadata } from '@/components/SchemaMetadata';
 
 export const metadata = buildMetadata({
   title: 'Contact Us | Naperville Home Pros',
   description: 'Get in touch with Naperville Home Pros. Questions about our directory, adding your business, or need help finding a service provider? We\'re here to help.',
   path: '/contact',
   ogType: 'website'
-});
-
-export const viewport = buildViewport({
-  width: 'device-width',
-  initialScale: 1,
-  maximumScale: 2,
-  userScalable: true,
-  themeColor: '#0f766e'
 });
 
 export default function ContactPage() {

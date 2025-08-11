@@ -7,7 +7,7 @@ import { JsonLd } from '@/components/JsonLd';
 import blogPosts from '@/data/blog-posts.json';
 import categories from '@/data/categories.json';
 import { SEO_CONSTANTS } from '@/lib/seo';
-import { buildMetadata, buildViewport } from '@/components/SchemaMetadata';
+import { buildMetadata } from '@/components/SchemaMetadata';
 
 interface BlogPostPageProps {
   params: {
@@ -36,15 +36,6 @@ export async function generateMetadata({ params }: BlogPostPageProps) {
     ogType: 'article'
   });
 }
-
-// Generate viewport for each blog post
-export const viewport = buildViewport({
-  width: 'device-width',
-  initialScale: 1,
-  maximumScale: 2,
-  userScalable: true,
-  themeColor: '#0f766e'
-});
 
 // Generate static paths for all blog posts
 export async function generateStaticParams() {

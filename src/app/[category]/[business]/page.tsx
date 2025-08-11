@@ -8,7 +8,7 @@ import FeaturedBadge from '@/components/FeaturedBadge';
 import categories from '@/data/categories.json';
 import listings from '@/data/listings.json';
 import { SEO_CONSTANTS } from '@/lib/seo';
-import { buildMetadata, buildViewport } from '@/components/SchemaMetadata';
+import { buildMetadata } from '@/components/SchemaMetadata';
 
 interface BusinessPageProps {
   params: {
@@ -44,15 +44,6 @@ export async function generateMetadata({ params }: BusinessPageProps) {
     ogType: 'website'
   });
 }
-
-// Generate viewport for each business page
-export const viewport = buildViewport({
-  width: 'device-width',
-  initialScale: 1,
-  maximumScale: 2,
-  userScalable: true,
-  themeColor: '#0f766e'
-});
 
 // Generate static paths for all businesses
 export async function generateStaticParams() {

@@ -1,7 +1,6 @@
 // JSX namespace declaration removed - using standard React types
 
-import type { Metadata, Viewport } from 'next'
-import { buildViewport } from '@/components/SchemaMetadata'
+import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import '../styles/print.css'
@@ -22,20 +21,14 @@ export const metadata: Metadata = {
     default: 'Home Service Pros in Naperville & Wheaton | Naperville Home Pros',
   },
   description: 'Find trusted plumbers, electricians, roofers & more. Compare top local pros in Naperville & Wheaton. Feature your business today.',
+  viewport: 'width=device-width, initial-scale=1',
+  themeColor: '#4f46e5',
   icons: {
     icon: '/favicon.ico',
     apple: '/apple-touch-icon.png',
   },
   manifest: '/manifest.json',
 }
-
-export const viewport = buildViewport({
-  width: 'device-width',
-  initialScale: 1,
-  maximumScale: 2,
-  userScalable: true,
-  themeColor: '#4f46e5'
-})
 
 import { Providers } from './providers';
 

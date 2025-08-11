@@ -1,5 +1,5 @@
 import React from 'react';
-import { Metadata, Viewport } from 'next';
+import { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import SearchBar from '@/components/SearchBar';
@@ -23,15 +23,6 @@ export async function generateMetadata({ searchParams }: SearchPageProps): Promi
     },
   };
 }
-
-// Define viewport for the search page
-export const viewport: Viewport = {
-  width: 'device-width',
-  initialScale: 1,
-  maximumScale: 2,
-  userScalable: true,
-  themeColor: '#0f766e'
-};
 
 // Mock function to simulate search results
 async function getSearchResults(query: string) {

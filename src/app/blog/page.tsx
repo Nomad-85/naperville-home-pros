@@ -5,21 +5,13 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import { JsonLd } from '@/components/JsonLd';
 import blogPosts from '@/data/blog-posts.json';
 import { SEO_CONSTANTS } from '@/lib/seo';
-import { buildMetadata, buildViewport } from '@/components/SchemaMetadata';
+import { buildMetadata } from '@/components/SchemaMetadata';
 
 export const metadata = buildMetadata({
   title: 'Home Service Blog | Naperville Home Pros',
   description: 'Expert tips, advice, and insights for homeowners in Naperville and Wheaton. Learn about HVAC, plumbing, landscaping, and more from local professionals.',
   path: '/blog',
   ogType: 'website'
-});
-
-export const viewport = buildViewport({
-  width: 'device-width',
-  initialScale: 1,
-  maximumScale: 2,
-  userScalable: true,
-  themeColor: '#0f766e'
 });
 
 // Format date to be more readable
