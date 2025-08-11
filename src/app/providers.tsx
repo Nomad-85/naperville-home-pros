@@ -5,14 +5,13 @@
 
 'use client';
 
-// Using direct import without type checking to avoid TypeScript errors
-import React from 'react';
+import { useEffect } from 'react';
 import { initAxe } from '@/utils/axe-helper';
 import { initKeyboardNavigation } from '@/utils/keyboard-navigation';
 
-// Define props interface with any to avoid TypeScript errors
+// Define props interface with proper React types
 type ProvidersProps = {
-  children: any;
+  children: React.ReactNode;
 };
 
 /**
@@ -21,8 +20,7 @@ type ProvidersProps = {
  */
 export function Providers({ children }: ProvidersProps) {
   // Initialize accessibility features on client-side only
-  // @ts-ignore - Ignoring TypeScript errors for React.useEffect
-  React.useEffect(() => {
+  useEffect(() => {
     // Initialize axe-core for accessibility testing in development
     initAxe();
     

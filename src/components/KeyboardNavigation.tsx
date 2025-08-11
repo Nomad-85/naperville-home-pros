@@ -31,13 +31,25 @@ const KeyboardNavigation: React.FC<KeyboardNavigationProps> = ({
 
       const elements = Array.from(
         container.querySelectorAll(selector)
-      ).filter(el => 
+      ).filter(el => {
         // Filter for focusable elements that are visible
-        el instanceof HTMLElement && 
-        !el.disabled && 
-        el.style.display !== 'none' && 
-        el.style.visibility !== 'hidden'
-      ) as HTMLElement[];
+        if (!(el instanceof HTMLElement)) return false;
+        
+        // Check for disabled property on form elements
+        const isDisabled = (
+          (el instanceof HTMLButtonElement || 
+           el instanceof HTMLInputElement || 
+           el instanceof HTMLSelectElement || 
+           el instanceof HTMLTextAreaElement || 
+           el instanceof HTMLOptGroupElement || 
+           el instanceof HTMLOptionElement) && 
+          el.disabled
+        );
+        
+        return !isDisabled && 
+          el.style.display !== 'none' && 
+          el.style.visibility !== 'hidden';
+      }) as HTMLElement[];
 
       if (elements.length === 0) return;
 

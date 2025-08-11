@@ -1,14 +1,6 @@
-// Add JSX namespace declaration to fix JSX element type errors
-// @ts-ignore
-declare namespace JSX {
-  interface IntrinsicElements {
-    [elemName: string]: any;
-  }
-}
+// JSX namespace declaration removed - using standard React types
 
-// @ts-ignore - Ignoring missing type declarations for Next.js modules
 import type { Metadata } from 'next'
-// @ts-ignore - Ignoring missing type declarations for Next.js font module
 import { Inter } from 'next/font/google'
 import './globals.css'
 import '../styles/print.css'
@@ -17,11 +9,9 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { JsonLd } from '@/components/JsonLd'
 import AccessibilityWidget from '@/components/AccessibilityWidget'
-// @ts-ignore - Ignoring missing type declarations for Next.js script module
 import Script from 'next/script'
 import SkipLink from '@/components/SkipLink'
-// Add React import to fix ReactNode type issues
-import React from 'react'
+import type { ReactNode } from 'react'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -45,8 +35,7 @@ import { Providers } from './providers';
 export default function RootLayout({
   children,
 }: {
-  // Using any type to avoid React.ReactNode type issues
-  children: any
+  children: ReactNode
 }) {
   return (
     <html lang="en">
@@ -64,7 +53,6 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
       <body className={inter.className}>
-        {/* @ts-ignore - Ignoring missing children prop error */}
         <Providers>
           {/* Skip to content link for accessibility */}
           <SkipLink targetId="main-content" />

@@ -1,5 +1,12 @@
 // Type declarations for the Naperville Home Pros project
 
+// React and Next.js type declarations
+declare module 'react' {
+  interface HTMLAttributes<T> extends AriaAttributes, DOMAttributes<T> {
+    // Add custom attributes here
+  }
+}
+
 // JSON data types
 interface Category {
   id: string;
@@ -108,8 +115,7 @@ declare module '*.jpg' {
 }
 
 declare module '*.svg' {
-  import { SVGProps } from 'react';
-  const content: React.FC<SVGProps<SVGSVGElement>>;
+  const content: React.FC<React.SVGProps<SVGSVGElement>>;
   export default content;
 }
 
