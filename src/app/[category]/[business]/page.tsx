@@ -1,5 +1,4 @@
 import React from 'react';
-import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -9,6 +8,7 @@ import FeaturedBadge from '@/components/FeaturedBadge';
 import categories from '@/data/categories.json';
 import listings from '@/data/listings.json';
 import { SEO_CONSTANTS } from '@/lib/seo';
+import { buildMetadata } from '@/components/SchemaMetadata';
 
 interface BusinessPageProps {
   params: {
@@ -18,7 +18,7 @@ interface BusinessPageProps {
 }
 
 // Generate metadata for each business page
-export async function generateMetadata({ params }: BusinessPageProps): Promise<Metadata> {
+export async function generateMetadata({ params }: BusinessPageProps) {
   const { category: categorySlug, business: businessSlug } = params;
   
   const listing = listings.find(
@@ -26,17 +26,23 @@ export async function generateMetadata({ params }: BusinessPageProps): Promise<M
   );
   
   if (!listing) {
-    return {
+    return buildMetadata({
       title: 'Business Not Found',
-    };
+      description: 'The requested business could not be found.',
+      path: `/${categorySlug}/${businessSlug}`,
+      ogType: 'website'
+    });
   }
   
   const category = categories.find(c => c.slug === categorySlug);
   
-  return {
+  return buildMetadata({
     title: `${listing.name} — ${category?.name} in Naperville & Wheaton`,
     description: `Contact ${listing.name} for ${listing.services.slice(0, 2).join(', ')}. Serving Naperville & Wheaton.`,
-  };
+    path: `/${categorySlug}/${businessSlug}`,
+    image: listing.image ? { url: listing.image } : undefined,
+    ogType: 'website'
+  });
 }
 
 // Generate static paths for all businesses

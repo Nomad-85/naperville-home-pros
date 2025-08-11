@@ -1,13 +1,15 @@
 import React from 'react';
-import { Metadata } from 'next';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { JsonLd } from '@/components/JsonLd';
 import { SEO_CONSTANTS } from '@/lib/seo';
+import { buildMetadata } from '@/components/SchemaMetadata';
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: 'Privacy Policy | Naperville Home Pros',
   description: 'Our privacy policy explains how we collect, use, and protect your personal information when you use the Naperville Home Pros directory.',
-};
+  path: '/privacy',
+  ogType: 'website'
+});
 
 export default function PrivacyPage() {
   return (

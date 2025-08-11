@@ -1,7 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Metadata } from 'next';
 import Search from '@/components/Search';
 import ListingCard from '@/components/ListingCard';
 import CTASection from '@/components/CTASection';
@@ -9,11 +8,14 @@ import { JsonLd } from '@/components/JsonLd';
 import categories from '@/data/categories.json';
 import listings from '@/data/listings.json';
 import { SEO_CONSTANTS } from '@/lib/seo';
+import { buildMetadata } from '@/components/SchemaMetadata';
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: 'Home Service Pros in Naperville & Wheaton | Naperville Home Pros',
   description: 'Find trusted plumbers, electricians, roofers & more. Compare top local pros in Naperville & Wheaton. Feature your business today.',
-};
+  path: '/',
+  ogType: 'website'
+});
 
 export default function Home() {
   // Get featured listings

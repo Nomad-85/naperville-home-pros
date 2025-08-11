@@ -1,5 +1,4 @@
 import React from 'react';
-import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import Breadcrumbs from '@/components/Breadcrumbs';
@@ -9,6 +8,7 @@ import CTASection from '@/components/CTASection';
 import categories from '@/data/categories.json';
 import listings from '@/data/listings.json';
 import { SEO_CONSTANTS } from '@/lib/seo';
+import { buildMetadata } from '@/components/SchemaMetadata';
 
 interface CategoryPageProps {
   params: {
@@ -20,19 +20,24 @@ interface CategoryPageProps {
 }
 
 // Generate metadata for each category page
-export async function generateMetadata({ params }: CategoryPageProps): Promise<Metadata> {
+export async function generateMetadata({ params }: CategoryPageProps) {
   const category = categories.find(c => c.slug === params.category);
   
   if (!category) {
-    return {
+    return buildMetadata({
       title: 'Category Not Found',
-    };
+      description: 'The requested category could not be found.',
+      path: `/${params.category}`,
+      ogType: 'website'
+    });
   }
   
-  return {
+  return buildMetadata({
     title: `Best ${category.name} in Naperville & Wheaton | Naperville Home Pros`,
     description: `Compare top ${category.name.toLowerCase()} near Naperville & Wheaton. View details and contact pros fast.`,
-  };
+    path: `/${category.slug}`,
+    ogType: 'website'
+  });
 }
 
 // Generate static paths for all categories

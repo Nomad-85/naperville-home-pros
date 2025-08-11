@@ -1,84 +1,101 @@
-import React from 'react';
-import { Metadata } from 'next';
+// src/components/SchemaMetadata.tsx
+import type { Metadata } from 'next';
 
-interface SchemaMetadataProps {
+type OGType =
+  | 'website'
+  | 'article'
+  | 'book'
+  | 'profile'
+  | 'music.song'
+  | 'music.album'
+  | 'music.playlist'
+  | 'music.radio_station'
+  | 'video.movie'
+  | 'video.episode'
+  | 'video.tv_show'
+  | 'video.other';
+
+interface MetaInput {
   title: string;
   description: string;
-  canonicalUrl: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: 'summary' | 'summary_large_image';
-  noIndex?: boolean;
-  alternateLanguages?: Record<string, string>;
-  keywords?: string[];
+  path?: string;               // e.g., "/plumbers"
+  siteName?: string;           // default "Naperville Home Pros"
+  ogType?: OGType;             // default "website"
+  image?: {
+    url: string;
+    width?: number;
+    height?: number;
+    alt?: string;
+  };
+  locale?: string;             // default "en_US"
+  alternates?: Record<string, string>; // { "en-US": "/en", "es-ES": "/es" }
 }
 
-export function generateMetadata({
-  title,
-  description,
-  canonicalUrl,
-  ogImage = '/images/og-image.jpg',
-  ogType = 'website',
-  twitterCard = 'summary_large_image',
-  noIndex = false,
-  alternateLanguages = {},
-  keywords = [],
-}: SchemaMetadataProps): Metadata {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://napervillehomepros.com';
-  const fullCanonicalUrl = canonicalUrl.startsWith('http') ? canonicalUrl : `${baseUrl}${canonicalUrl}`;
-  const fullOgImage = ogImage.startsWith('http') ? ogImage : `${baseUrl}${ogImage}`;
-  
-  return {
+const BASE_URL = 'https://napervillehomepros.com';
+
+export function buildMetadata(input: MetaInput): Metadata {
+  const {
     title,
     description,
-    keywords: keywords.join(', '),
-    metadataBase: new URL(baseUrl),
+    path = '/',
+    siteName = 'Naperville Home Pros',
+    ogType = 'website',
+    image,
+    locale = 'en_US',
+    alternates
+  } = input;
+
+  const url = path.startsWith('http') ? path : `${BASE_URL}${path}`;
+  const ogImages: NonNullable<NonNullable<Metadata['openGraph']>['images']> =
+    image
+      ? [
+          {
+            url: image.url,
+            width: image.width ?? 1200,
+            height: image.height ?? 630,
+            alt: image.alt ?? title,
+          },
+        ]
+      : [
+          {
+            url: `${BASE_URL}/static/og-default.jpg`,
+            width: 1200,
+            height: 630,
+            alt: title,
+          },
+        ];
+
+  const md: Metadata = {
+    title,
+    description,
     alternates: {
-      canonical: fullCanonicalUrl,
-      languages: alternateLanguages,
+      canonical: url,
+      languages: alternates ?? undefined, // object map of locale -> URL; optional
     },
     openGraph: {
       title,
       description,
-      url: fullCanonicalUrl,
-      siteName: 'Naperville Home Pros',
-      images: [
-        {
-          url: fullOgImage,
-          width: 1200,
-          height: 630,
-          alt: title,
-        },
-      ],
-      locale: 'en_US',
-      type: ogType,
+      url,
+      siteName,
+      images: ogImages,
+      locale,
+      type: ogType as OGType, // <-- ensure it's a valid literal
     },
     twitter: {
-      card: twitterCard,
+      card: 'summary_large_image',
       title,
       description,
-      images: [fullOgImage],
-      creator: '@napervillehomepros',
-      site: '@napervillehomepros',
-    },
-    robots: {
-      index: !noIndex,
-      follow: !noIndex,
-      googleBot: {
-        index: !noIndex,
-        follow: !noIndex,
-        'max-image-preview': 'large',
-        'max-snippet': -1,
-        'max-video-preview': -1,
-      },
-    },
-    verification: {
-      google: 'google-site-verification-code', // Replace with actual verification code
-    },
-    other: {
-      'theme-color': '#4f46e5',
+      images: ogImages.map(i => (typeof i === 'string' ? i : 'url' in i ? i.url : i.toString())),
     },
   };
+
+  return md;
+}
+
+// Convenience component if you were rendering tags manually (optional):
+export default function SchemaMetadata(_: { meta?: Metadata }) {
+  // No-op in App Router when using exported `metadata` per page.
+  return null;
 }
 
 // Helper function for category pages
@@ -87,11 +104,11 @@ export function generateCategoryMetadata(category: {
   slug: string;
   description: string;
 }) {
-  return generateMetadata({
+  return buildMetadata({
     title: `${category.name} Services in Naperville & Wheaton, IL`,
     description: category.description || `Find trusted ${category.name.toLowerCase()} professionals in Naperville and Wheaton, IL. Compare local services, read reviews, and contact top-rated providers.`,
-    canonicalUrl: `/${category.slug}`,
-    keywords: [category.name, 'Naperville', 'Wheaton', 'Illinois', 'home services', 'local professionals'],
+    path: `/${category.slug}`,
+    ogType: 'website',
   });
 }
 
@@ -103,13 +120,12 @@ export function generateBusinessMetadata(business: {
   description: string;
   image?: string;
 }) {
-  return generateMetadata({
+  return buildMetadata({
     title: `${business.name} - ${business.category.name} in Naperville & Wheaton, IL`,
     description: business.description || `${business.name} provides professional ${business.category.name.toLowerCase()} services in Naperville and Wheaton, IL. Contact them today for a quote.`,
-    canonicalUrl: `/${business.category.slug}/${business.slug}`,
-    ogImage: business.image || '/images/og-image.jpg',
-    ogType: 'business.business',
-    keywords: [business.name, business.category.name, 'Naperville', 'Wheaton', 'Illinois', 'home services'],
+    path: `/${business.category.slug}/${business.slug}`,
+    image: business.image ? { url: business.image } : undefined,
+    ogType: 'website', // Using 'website' as 'business.business' is not in the OGType union
   });
 }
 
@@ -121,13 +137,11 @@ export function generateBlogPostMetadata(post: {
   coverImage?: string;
   date: string;
 }) {
-  return generateMetadata({
+  return buildMetadata({
     title: `${post.title} | Naperville Home Pros Blog`,
     description: post.excerpt,
-    canonicalUrl: `/blog/${post.slug}`,
-    ogImage: post.coverImage || '/images/blog-default.jpg',
+    path: `/blog/${post.slug}`,
+    image: post.coverImage ? { url: post.coverImage } : undefined,
     ogType: 'article',
-    twitterCard: 'summary_large_image',
-    keywords: ['blog', 'home improvement', 'Naperville', 'Wheaton', 'home services'],
   });
 }

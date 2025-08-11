@@ -1,13 +1,15 @@
 import React from 'react';
-import { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import StructuredData from '@/components/StructuredData';
+import { buildMetadata } from '@/components/SchemaMetadata';
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: 'Accessibility Statement | Naperville Home Pros',
   description: 'Our commitment to accessibility for all users of the Naperville Home Pros directory.',
-};
+  path: '/accessibility',
+  ogType: 'website'
+});
 
 export default function AccessibilityPage() {
   const breadcrumbItems = [

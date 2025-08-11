@@ -1,13 +1,15 @@
 import React from 'react';
-import { Metadata } from 'next';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { JsonLd } from '@/components/JsonLd';
 import { SEO_CONSTANTS } from '@/lib/seo';
+import { buildMetadata } from '@/components/SchemaMetadata';
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: 'Terms of Service | Naperville Home Pros',
   description: 'Our terms of service outline the rules, guidelines, and legal terms that govern your use of the Naperville Home Pros directory.',
-};
+  path: '/terms',
+  ogType: 'website'
+});
 
 export default function TermsPage() {
   return (

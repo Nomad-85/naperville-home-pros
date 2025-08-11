@@ -1,16 +1,18 @@
 import React from 'react';
-import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { JsonLd } from '@/components/JsonLd';
 import blogPosts from '@/data/blog-posts.json';
 import { SEO_CONSTANTS } from '@/lib/seo';
+import { buildMetadata } from '@/components/SchemaMetadata';
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: 'Home Service Blog | Naperville Home Pros',
   description: 'Expert tips, advice, and insights for homeowners in Naperville and Wheaton. Learn about HVAC, plumbing, landscaping, and more from local professionals.',
-};
+  path: '/blog',
+  ogType: 'website'
+});
 
 // Format date to be more readable
 function formatDate(dateString: string): string {

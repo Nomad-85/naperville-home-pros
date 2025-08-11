@@ -1,5 +1,4 @@
 import React from 'react';
-import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
@@ -8,6 +7,7 @@ import { JsonLd } from '@/components/JsonLd';
 import blogPosts from '@/data/blog-posts.json';
 import categories from '@/data/categories.json';
 import { SEO_CONSTANTS } from '@/lib/seo';
+import { buildMetadata } from '@/components/SchemaMetadata';
 
 interface BlogPostPageProps {
   params: {
@@ -16,19 +16,25 @@ interface BlogPostPageProps {
 }
 
 // Generate metadata for each blog post
-export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
+export async function generateMetadata({ params }: BlogPostPageProps) {
   const post = blogPosts.find(post => post.slug === params.slug);
   
   if (!post) {
-    return {
+    return buildMetadata({
       title: 'Blog Post Not Found',
-    };
+      description: 'The requested blog post could not be found.',
+      path: `/blog/${params.slug}`,
+      ogType: 'website'
+    });
   }
   
-  return {
+  return buildMetadata({
     title: `${post.title} | Naperville Home Pros Blog`,
     description: post.excerpt,
-  };
+    path: `/blog/${post.slug}`,
+    image: post.image ? { url: post.image } : undefined,
+    ogType: 'article'
+  });
 }
 
 // Generate static paths for all blog posts
