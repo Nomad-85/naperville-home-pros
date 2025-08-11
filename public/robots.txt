@@ -1,0 +1,14 @@
+# robots.txt for Naperville Home Pros
+User-agent: *
+Allow: /
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+
+# Disallow search results pages
+Disallow: /search?*
+
+# Allow all bots to access sitemap
+Sitemap: https://napervillehomepros.com/sitemap.xml

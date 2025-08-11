@@ -1,0 +1,157 @@
+/* Print Stylesheet for Naperville Home Pros
+ * Optimizes the website for printing
+ */
+
+@media print {
+  /* General Print Styles */
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+    color: #000;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  /* Hide non-essential elements */
+  header nav,
+  footer,
+  .accessibility-widget,
+  .search-form,
+  .mobile-nav,
+  .skip-link,
+  button[id^="print-"],
+  #connection-status,
+  .share-buttons,
+  .cta-section,
+  .newsletter-signup,
+  .add-business-banner,
+  .announcement-banner {
+    display: none !important;
+  }
+
+  /* Show header logo only */
+  header {
+    border-bottom: 1pt solid #ddd;
+    margin-bottom: 20pt;
+    padding-bottom: 10pt;
+  }
+
+  header .logo {
+    display: block;
+    max-width: 200pt;
+    margin: 0 auto;
+  }
+
+  /* Optimize links */
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+
+  /* Show URLs after link text */
+  a[href^="http"]:after,
+  a[href^="https"]:after {
+    content: " (" attr(href) ")";
+    font-size: 90%;
+    font-style: italic;
+  }
+
+  /* Don't show URL for internal links */
+  a[href^="/"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+
+  /* Page breaks */
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+    page-break-inside: avoid;
+  }
+
+  img, table, figure {
+    page-break-inside: avoid;
+    max-width: 100% !important;
+  }
+
+  p, blockquote, ul, ol, dl {
+    page-break-inside: avoid;
+  }
+
+  /* Ensure background colors and images print */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Improve table readability */
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 15pt 0;
+  }
+
+  table, th, td {
+    border: 1pt solid #ddd;
+  }
+
+  th, td {
+    padding: 5pt;
+    text-align: left;
+  }
+
+  /* Listing cards */
+  .listing-card {
+    break-inside: avoid;
+    border: 1pt solid #ddd;
+    padding: 10pt;
+    margin-bottom: 15pt;
+  }
+
+  /* Blog posts */
+  article.blog-post {
+    max-width: 100%;
+  }
+
+  article.blog-post img {
+    max-width: 80% !important;
+    margin: 10pt auto;
+    display: block;
+  }
+
+  /* Add print-only elements */
+  .print-url {
+    display: block !important;
+    font-size: 10pt;
+    color: #666;
+    text-align: center;
+    margin-top: 20pt;
+  }
+
+  .print-date {
+    display: block !important;
+    font-size: 10pt;
+    color: #666;
+    text-align: center;
+    margin-top: 5pt;
+  }
+
+  /* Add page numbers */
+  @page {
+    margin: 2cm;
+  }
+
+  @page :first {
+    margin-top: 3cm;
+  }
+
+  /* Improve contrast for text */
+  p, li, td, th {
+    color: #000 !important;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: #000 !important;
+  }
+}

@@ -1,0 +1,44 @@
+/**
+ * Keyboard navigation styles
+ * Enhances accessibility by providing visual focus indicators for keyboard users
+ */
+
+/* Show focus styles only when user is navigating with keyboard */
+.user-is-tabbing :focus {
+  outline: 2px solid #4299e1 !important; /* Blue outline */
+  outline-offset: 3px !important;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5) !important;
+}
+
+/* Hide focus styles when using mouse */
+:focus:not(:focus-visible) {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Skip link styles */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #4299e1;
+  color: white;
+  padding: 8px;
+  z-index: 100;
+  transition: top 0.2s;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* High contrast mode improvements */
+@media (forced-colors: active) {
+  .user-is-tabbing :focus {
+    outline: 3px solid CanvasText !important;
+  }
+  
+  button, a {
+    forced-color-adjust: none;
+  }
+}

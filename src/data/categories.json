@@ -1,0 +1,10 @@
+[
+  {"slug":"plumbers","name":"Plumbers"},
+  {"slug":"electricians","name":"Electricians"},
+  {"slug":"roofers","name":"Roofers"},
+  {"slug":"hvac","name":"HVAC"},
+  {"slug":"landscapers","name":"Landscapers"},
+  {"slug":"painters","name":"Painters"},
+  {"slug":"flooring","name":"Flooring"},
+  {"slug":"remodeling","name":"Remodeling"}
+]
