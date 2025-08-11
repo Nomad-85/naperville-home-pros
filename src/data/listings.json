@@ -6,7 +6,7 @@
     "short_description":"Fast, reliable plumbing & water heater service in Naperville & Wheaton.",
     "services":["Emergency leaks","Water heaters","Drain cleaning","Sump pumps"],
     "service_areas":["Naperville","Wheaton","Lisle"],
-    "hours":"Mon–Fri 8–6, Sat 9–3","image":"/static/listings/plumbers/premier.jpg","city":"Naperville"
+    "hours":"Mon–Fri 8–6, Sat 9–3","image":"/static/placeholders/listing.svg","city":"Naperville"
   },
   {
     "category":"plumbers","featured":false,
@@ -15,7 +15,7 @@
     "short_description":"Clogs cleared fast. Licensed, insured, and local.",
     "services":["Drain cleaning","Sewer camera","Toilet repair"],
     "service_areas":["Naperville","Warrenville"],
-    "hours":"Mon–Sat 7–7","image":"/static/listings/plumbers/riverwalk.jpg","city":"Naperville"
+    "hours":"Mon–Sat 7–7","image":"/static/placeholders/listing.svg","city":"Naperville"
   },
   {
     "category":"electricians","featured":true,
@@ -24,7 +24,7 @@
     "short_description":"Panel upgrades, EV chargers, and lighting installs with fast scheduling.",
     "services":["Panel upgrades","EV chargers","Lighting","Outlet repair"],
     "service_areas":["Wheaton","Naperville","Glen Ellyn"],
-    "hours":"Mon–Fri 8–5","image":"/static/listings/electricians/wirelight.jpg","city":"Wheaton"
+    "hours":"Mon–Fri 8–5","image":"/static/placeholders/listing.svg","city":"Wheaton"
   },
   {
     "category":"electricians","featured":false,
@@ -33,7 +33,7 @@
     "short_description":"Residential and commercial electrical services with 24/7 emergency support.",
     "services":["Rewiring","Code compliance","Ceiling fans","Troubleshooting"],
     "service_areas":["Naperville","Aurora","Plainfield"],
-    "hours":"Mon–Sun 7–8","image":"/static/listings/electricians/naperville-electric.jpg","city":"Naperville"
+    "hours":"Mon–Sun 7–8","image":"/static/placeholders/listing.svg","city":"Naperville"
   },
   {
     "category":"roofers","featured":true,
@@ -42,7 +42,7 @@
     "short_description":"Asphalt, cedar, and flat roof specialists. Free inspections.",
     "services":["Roof replacement","Repair","Storm damage"],
     "service_areas":["Naperville","Wheaton","Aurora"],
-    "hours":"Mon–Fri 8–6","image":"/static/listings/roofers/dupage.jpg","city":"Naperville"
+    "hours":"Mon–Fri 8–6","image":"/static/placeholders/listing.svg","city":"Naperville"
   },
   {
     "category":"roofers","featured":false,
@@ -51,7 +51,7 @@
     "short_description":"Family-owned roofing company with 20+ years of experience.",
     "services":["Shingle roofing","Metal roofing","Gutters","Siding"],
     "service_areas":["Wheaton","Winfield","Carol Stream"],
-    "hours":"Mon–Sat 7–5","image":"/static/listings/roofers/wheaton-masters.jpg","city":"Wheaton"
+    "hours":"Mon–Sat 7–5","image":"/static/placeholders/listing.svg","city":"Wheaton"
   },
   {
     "category":"hvac","featured":true,
@@ -60,7 +60,7 @@
     "short_description":"Heating, cooling, and air quality experts serving DuPage County.",
     "services":["Furnace repair","AC installation","Maintenance plans","Air purification"],
     "service_areas":["Naperville","Lisle","Woodridge"],
-    "hours":"Mon–Sun 8–8","image":"/static/listings/hvac/naperville-heating.jpg","city":"Naperville"
+    "hours":"Mon–Sun 8–8","image":"/static/placeholders/listing.svg","city":"Naperville"
   },
   {
     "category":"hvac","featured":false,
@@ -69,7 +69,7 @@
     "short_description":"AC repair, furnace tune-ups, and indoor air quality.",
     "services":["AC repair","Furnace","Tune-ups","IAQ"],
     "service_areas":["Naperville","Wheaton","Bolingbrook"],
-    "hours":"Mon–Sun 7–7","image":"/static/listings/hvac/rivercity.jpg","city":"Naperville"
+    "hours":"Mon–Sun 7–7","image":"/static/placeholders/listing.svg","city":"Naperville"
   },
   {
     "category":"landscapers","featured":true,
@@ -78,7 +78,7 @@
     "short_description":"Complete landscape design, installation, and maintenance services.",
     "services":["Landscape design","Hardscaping","Irrigation","Lawn care"],
     "service_areas":["Naperville","Wheaton","Aurora"],
-    "hours":"Mon–Fri 7–6, Sat 8–4","image":"/static/listings/landscapers/green-valley.jpg","city":"Naperville"
+    "hours":"Mon–Fri 7–6, Sat 8–4","image":"/static/placeholders/listing.svg","city":"Naperville"
   },
   {
     "category":"landscapers","featured":false,
@@ -87,7 +87,7 @@
     "short_description":"Mowing, cleanups, mulch, seasonal color.",
     "services":["Weekly mowing","Mulch","Cleanups","Planting"],
     "service_areas":["Naperville","Wheaton","Winfield"],
-    "hours":"Mon–Sat 8–6","image":"/static/listings/landscapers/prairiepath.jpg","city":"Naperville"
+    "hours":"Mon–Sat 8–6","image":"/static/placeholders/listing.svg","city":"Naperville"
   },
   {
     "category":"painters","featured":true,
@@ -96,7 +96,7 @@
     "short_description":"Interior & exterior painting with clean, on-time crews.",
     "services":["Interior","Exterior","Cabinet refinishing"],
     "service_areas":["Naperville","Wheaton","Downers Grove"],
-    "hours":"Mon–Fri 8–5","image":"/static/listings/painters/riverwalk.jpg","city":"Naperville"
+    "hours":"Mon–Fri 8–5","image":"/static/placeholders/listing.svg","city":"Naperville"
   },
   {
     "category":"painters","featured":false,
@@ -105,7 +105,7 @@
     "short_description":"Premium painting services with color consultation included.",
     "services":["Residential","Commercial","Color consulting","Drywall repair"],
     "service_areas":["Wheaton","Glen Ellyn","Winfield"],
-    "hours":"Mon–Fri 8–6","image":"/static/listings/painters/wheaton-color.jpg","city":"Wheaton"
+    "hours":"Mon–Fri 8–6","image":"/static/placeholders/listing.svg","city":"Wheaton"
   },
   {
     "category":"flooring","featured":true,
@@ -114,7 +114,7 @@
     "short_description":"Quality flooring installation with lifetime installation warranty.",
     "services":["Hardwood","Laminate","Tile","Carpet"],
     "service_areas":["Naperville","Lisle","Plainfield"],
-    "hours":"Mon–Sat 9–6, Sun 11–4","image":"/static/listings/flooring/naperville-floors.jpg","city":"Naperville"
+    "hours":"Mon–Sat 9–6, Sun 11–4","image":"/static/placeholders/listing.svg","city":"Naperville"
   },
   {
     "category":"flooring","featured":false,
@@ -123,7 +123,7 @@
     "short_description":"Hardwood, LVP, and carpet installation.",
     "services":["Hardwood","LVP","Carpet","Stairs"],
     "service_areas":["Naperville","Aurora","Wheaton"],
-    "hours":"Mon–Sat 9–5","image":"/static/listings/flooring/foxvalley.jpg","city":"Aurora"
+    "hours":"Mon–Sat 9–5","image":"/static/placeholders/listing.svg","city":"Aurora"
   },
   {
     "category":"remodeling","featured":true,
@@ -132,7 +132,7 @@
     "short_description":"Kitchens, baths, and basements with transparent timelines.",
     "services":["Kitchens","Bathrooms","Basements"],
     "service_areas":["Naperville","Wheaton","Lisle"],
-    "hours":"Mon–Fri 8–6","image":"/static/listings/remodeling/naperremodel.jpg","city":"Naperville"
+    "hours":"Mon–Fri 8–6","image":"/static/placeholders/listing.svg","city":"Naperville"
   },
   {
     "category":"remodeling","featured":false,
@@ -141,6 +141,6 @@
     "short_description":"Full-service design-build firm specializing in whole-home renovations.",
     "services":["Whole home","Additions","Kitchens","Outdoor living"],
     "service_areas":["Wheaton","Glen Ellyn","Winfield"],
-    "hours":"Mon–Fri 9–5","image":"/static/listings/remodeling/wheaton-transformations.jpg","city":"Wheaton"
+    "hours":"Mon–Fri 9–5","image":"/static/placeholders/listing.svg","city":"Wheaton"
   }
 ]

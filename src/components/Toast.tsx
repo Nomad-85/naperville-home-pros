@@ -95,11 +95,11 @@ export function Toast({
       role="alert"
       aria-live="assertive"
       id={id}
-      className={`fixed bottom-4 right-4 max-w-md transform transition-transform duration-300 ease-in-out ${
-        isVisible ? 'translate-y-0' : 'translate-y-20 opacity-0'
+      className={`fixed bottom-4 right-4 max-w-md transform transition-all duration-300 ease-in-out ${
+        isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
       }`}
     >
-      <div className={`flex items-start p-4 border-l-4 rounded-lg shadow-lg ${getTypeStyles()}`}>
+      <div className={`flex items-start p-4 border-l-4 rounded-lg shadow-xl backdrop-blur-sm ${getTypeStyles()}`}>
         <div className="flex-shrink-0 mr-3">
           {getIconByType()}
         </div>
@@ -108,7 +108,7 @@ export function Toast({
         </div>
         <button
           type="button"
-          className="ml-4 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
+          className="ml-4 text-gray-500 hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 rounded-full p-1 transition-colors duration-200"
           onClick={() => {
             setIsVisible(false);
             setTimeout(() => onClose?.(), 300);
@@ -124,7 +124,7 @@ export function Toast({
           </svg>
         </button>
       </div>
-      <div className="h-1 bg-gray-200 rounded-b-lg overflow-hidden">
+      <div className="h-1.5 bg-gray-200 rounded-b-lg overflow-hidden">
         <div
           className={`h-full ${
             type === 'success'
@@ -136,6 +136,7 @@ export function Toast({
               : 'bg-blue-500'
           }`}
           style={{ width: `${progress}%`, transition: 'width 100ms linear' }}
+          aria-hidden="true"
         />
       </div>
     </div>
@@ -148,7 +149,7 @@ interface ToastContainerProps {
 
 export function ToastContainer({ children }: ToastContainerProps) {
   return (
-    <div className="fixed bottom-4 right-4 z-50 flex flex-col space-y-2">
+    <div className="fixed bottom-4 right-4 z-50 flex flex-col space-y-3 max-w-md w-full">
       {children}
     </div>
   );

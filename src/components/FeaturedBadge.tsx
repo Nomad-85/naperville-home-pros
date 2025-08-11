@@ -8,9 +8,9 @@ interface FeaturedBadgeProps {
 
 const FeaturedBadge: React.FC<FeaturedBadgeProps> = ({ className = '' }) => {
   return (
-    <div className={`inline-flex items-center px-2 py-1 text-xs font-medium text-white rounded-md bg-primary-600 ${className}`}>
+    <div className={`inline-flex items-center px-4 py-2 text-sm font-bold text-white rounded-full bg-primary-600 shadow-md border border-primary-500 animate-pulse-slow ${className}`}>
       <svg 
-        className="w-3 h-3 mr-1" 
+        className="w-4 h-4 mr-1.5" 
         fill="currentColor" 
         viewBox="0 0 20 20" 
         xmlns="http://www.w3.org/2000/svg"

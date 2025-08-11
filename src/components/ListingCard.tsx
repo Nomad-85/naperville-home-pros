@@ -29,33 +29,38 @@ const ListingCard: React.FC<ListingCardProps> = ({
   services,
 }) => {
   return (
-    <div className={featured ? 'card-featured' : 'card'}>
+    <div className={`overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 h-full flex flex-col ${featured ? 'border-2 border-primary-500 bg-primary-50/20' : 'border border-gray-100'}`}>
       <div className="relative">
         {/* Image */}
-        <div className="relative h-48 w-full">
+        <div className="relative w-full aspect-[3/2] overflow-hidden rounded-t-xl bg-gray-100">
           <Image
-            src={image}
+            src={image || "/static/placeholders/listing.jpg"}
             alt={name}
             fill
-            className="object-cover"
+            className="rounded-xl object-cover w-full h-full"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            onError={(e) => {
+              // Fallback if the image fails to load
+              const target = e.target as HTMLImageElement;
+              target.src = "/static/placeholders/listing.jpg";
+            }}
           />
         </div>
         
         {/* Featured Badge */}
         {featured && (
-          <div className="absolute top-2 right-2">
-            <FeaturedBadge />
+          <div className="absolute top-3 right-3 z-10">
+            <FeaturedBadge className="shadow-md" />
           </div>
         )}
       </div>
       
-      <div className="p-4">
+      <div className="p-6 md:p-8 flex-1 flex flex-col">
         {/* Title */}
-        <h3 className="text-lg font-semibold text-gray-900">
+        <h3 className="text-xl font-bold text-gray-900 hover:text-primary-600 transition-colors">
           <Link 
             href={`/${category}/${slug}`}
-            className="hover:text-primary-600"
+            className="hover:text-primary-600 transition-colors"
           >
             {name}
           </Link>
@@ -65,33 +70,33 @@ const ListingCard: React.FC<ListingCardProps> = ({
         <p className="mt-1 text-sm text-gray-500">{city}</p>
         
         {/* Description */}
-        <p className="mt-2 text-sm text-gray-600">{short_description}</p>
+        <p className="mt-3 text-base text-gray-600 line-clamp-2">{short_description}</p>
         
         {/* Services */}
-        <div className="flex flex-wrap gap-1 mt-3">
+        <div className="flex flex-wrap gap-2 mt-5 flex-1">
           {services.slice(0, 3).map((service) => (
             <span 
               key={service} 
-              className="px-2 py-1 text-xs bg-gray-100 rounded-full text-gray-700"
+              className="px-3 py-1.5 text-sm font-medium bg-gray-100 rounded-full text-gray-700 hover:bg-gray-200 transition-colors shadow-sm"
             >
               {service}
             </span>
           ))}
           {services.length > 3 && (
-            <span className="px-2 py-1 text-xs bg-gray-100 rounded-full text-gray-700">
+            <span className="px-3 py-1.5 text-sm font-medium bg-primary-100 rounded-full text-primary-700 hover:bg-primary-200 transition-colors shadow-sm">
               +{services.length - 3} more
             </span>
           )}
         </div>
         
         {/* Contact */}
-        <div className="flex items-center justify-between mt-4 pt-4 border-t border-gray-100">
+        <div className="flex items-center justify-between mt-6 pt-5 border-t border-gray-100 mt-auto">
           <a 
             href={`tel:${phone.replace(/[^\d+]/g, '')}`}
-            className="flex items-center text-primary-600 hover:text-primary-700"
+            className="flex items-center text-primary-600 hover:text-primary-700 font-medium group"
           >
             <svg 
-              className="w-4 h-4 mr-1" 
+              className="w-5 h-5 mr-2 group-hover:animate-pulse" 
               fill="none" 
               stroke="currentColor" 
               viewBox="0 0 24 24" 
@@ -108,9 +113,12 @@ const ListingCard: React.FC<ListingCardProps> = ({
           </a>
           <Link 
             href={`/${category}/${slug}`}
-            className="text-sm font-medium text-primary-600 hover:text-primary-700"
+            className="inline-flex items-center text-base font-medium text-primary-600 hover:text-primary-700 transition-colors group"
           >
             View Details
+            <svg className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+            </svg>
           </Link>
         </div>
       </div>

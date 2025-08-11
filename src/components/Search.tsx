@@ -31,12 +31,12 @@ const Search: React.FC<SearchProps> = ({ categories, className = '' }) => {
   };
 
   return (
-    <div className={`bg-white rounded-lg shadow-md p-4 ${className}`}>
+    <div className={`bg-white rounded-xl shadow-lg p-8 ${className}`}>
       <form onSubmit={handleSubmit}>
         <div className="flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-4">
           {/* Keyword Search */}
           <div className="flex-1">
-            <label htmlFor="keyword" className="block text-sm font-medium text-gray-700 mb-1">
+            <label htmlFor="keyword" className="block text-sm font-medium text-gray-700 mb-2">
               What service do you need?
             </label>
             <input
@@ -44,7 +44,7 @@ const Search: React.FC<SearchProps> = ({ categories, className = '' }) => {
               id="keyword"
               name="keyword"
               placeholder="Search for services..."
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 shadow-sm text-base"
               value={keyword}
               onChange={(e) => setKeyword(e.target.value)}
             />
@@ -52,13 +52,13 @@ const Search: React.FC<SearchProps> = ({ categories, className = '' }) => {
           
           {/* Category Filter */}
           <div className="md:w-1/3">
-            <label htmlFor="category" className="block text-sm font-medium text-gray-700 mb-1">
+            <label htmlFor="category" className="block text-sm font-medium text-gray-700 mb-2">
               Category
             </label>
             <select
               id="category"
               name="category"
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 shadow-sm text-base"
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
             >
@@ -75,7 +75,7 @@ const Search: React.FC<SearchProps> = ({ categories, className = '' }) => {
           <div className="md:flex md:items-end">
             <button
               type="submit"
-              className="w-full md:w-auto px-6 py-2 text-white bg-primary-600 rounded-md hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
+              className="w-full md:w-auto px-8 py-3 text-white bg-primary-600 rounded-lg hover:bg-primary-500 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 font-medium shadow-md"
             >
               Search
             </button>

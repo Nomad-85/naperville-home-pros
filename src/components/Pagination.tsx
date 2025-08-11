@@ -76,15 +76,15 @@ export default function Pagination({
   return (
     <nav
       aria-label="Pagination"
-      className={`flex justify-center my-8 ${className}`}
+      className={`flex justify-center my-8 md:my-12 ${className}`}
     >
-      <ul className="flex items-center -space-x-px h-10 text-base">
+      <ul className="flex items-center -space-x-px h-12 text-base shadow-lg rounded-lg overflow-hidden animate-fadeIn">
         {/* Previous page button */}
         <li>
           {currentPage > 1 ? (
             <Link
               href={getPageUrl(currentPage - 1)}
-              className="flex items-center justify-center px-4 h-10 ml-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-l-lg hover:bg-gray-100 hover:text-gray-700"
+              className="flex items-center justify-center px-5 h-12 ml-0 leading-tight text-gray-600 bg-white border border-gray-300 rounded-l-lg hover:bg-primary-50 hover:text-primary-700 transition-all duration-200 font-medium hover:shadow-inner"
               aria-label="Previous page"
             >
               <span className="sr-only">Previous</span>
@@ -106,7 +106,7 @@ export default function Pagination({
             </Link>
           ) : (
             <span
-              className="flex items-center justify-center px-4 h-10 ml-0 leading-tight text-gray-300 bg-white border border-gray-300 rounded-l-lg cursor-not-allowed"
+              className="flex items-center justify-center px-5 h-12 ml-0 leading-tight text-gray-300 bg-gray-50 border border-gray-200 rounded-l-lg cursor-not-allowed opacity-75"
               aria-disabled="true"
               aria-label="Previous page"
             >
@@ -136,7 +136,7 @@ export default function Pagination({
             return (
               <li key={`ellipsis-${index}`}>
                 <span
-                  className="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300"
+                  className="flex items-center justify-center px-5 h-12 leading-tight text-gray-500 bg-white border border-gray-300"
                   aria-hidden="true"
                 >
                   &hellip;
@@ -153,14 +153,14 @@ export default function Pagination({
               {isCurrent ? (
                 <span
                   aria-current="page"
-                  className="z-10 flex items-center justify-center px-4 h-10 leading-tight text-primary-600 border border-primary-300 bg-primary-50"
+                  className="z-10 flex items-center justify-center px-5 h-12 leading-tight text-white border border-primary-600 bg-primary-600 font-medium shadow-inner"
                 >
                   {pageNum}
                 </span>
               ) : (
                 <Link
                   href={getPageUrl(pageNum)}
-                  className="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700"
+                  className="flex items-center justify-center px-5 h-12 leading-tight text-gray-600 bg-white border border-gray-300 hover:bg-primary-50 hover:text-primary-700 transition-all duration-200 hover:shadow-inner"
                   aria-label={`Page ${pageNum}`}
                 >
                   {pageNum}
@@ -175,7 +175,7 @@ export default function Pagination({
           {currentPage < totalPages ? (
             <Link
               href={getPageUrl(currentPage + 1)}
-              className="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 rounded-r-lg hover:bg-gray-100 hover:text-gray-700"
+              className="flex items-center justify-center px-5 h-12 leading-tight text-gray-600 bg-white border border-gray-300 rounded-r-lg hover:bg-primary-50 hover:text-primary-700 transition-all duration-200 font-medium hover:shadow-inner"
               aria-label="Next page"
             >
               <span className="sr-only">Next</span>
@@ -197,7 +197,7 @@ export default function Pagination({
             </Link>
           ) : (
             <span
-              className="flex items-center justify-center px-4 h-10 leading-tight text-gray-300 bg-white border border-gray-300 rounded-r-lg cursor-not-allowed"
+              className="flex items-center justify-center px-5 h-12 leading-tight text-gray-300 bg-gray-50 border border-gray-200 rounded-r-lg cursor-not-allowed opacity-75"
               aria-disabled="true"
               aria-label="Next page"
             >
