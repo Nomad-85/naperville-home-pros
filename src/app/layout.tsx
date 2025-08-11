@@ -105,8 +105,8 @@ export default function RootLayout({
           
           {/* Service worker registration for offline support */}
           <Script 
-            src="/register-sw.js"
             id="register-sw"
+            src="/register-sw.js"
             strategy="lazyOnload"
           />
           
