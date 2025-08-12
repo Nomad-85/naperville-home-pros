@@ -3,8 +3,8 @@
   {"slug":"electricians","name":"Electricians","image":"/static/categories/electricians.webp"},
   {"slug":"roofers","name":"Roofers","image":"/static/categories/roofers.webp"},
   {"slug":"hvac","name":"HVAC","image":"/static/categories/hvac.webp"},
-  {"slug":"landscapers","name":"Landscapers"},
-  {"slug":"painters","name":"Painters"},
-  {"slug":"flooring","name":"Flooring"},
-  {"slug":"remodeling","name":"Remodeling"}
+  {"slug":"landscapers","name":"Landscapers","image":"/static/categories/landscapers.webp"},
+  {"slug":"painters","name":"Painters","image":"/static/categories/painters.webp"},
+  {"slug":"flooring","name":"Flooring","image":"/static/categories/flooring.webp"},
+  {"slug":"remodeling","name":"Remodeling","image":"/static/categories/remodeling.webp"}
 ]
