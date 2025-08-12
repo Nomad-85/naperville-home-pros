@@ -9,12 +9,12 @@ interface ListingCardProps {
   name: string;
   slug: string;
   category: string;
-  city?: string;
+  city: string;
   short_description: string;
   phone: string;
-  image?: string | null;
-  featured?: boolean;
-  services?: string[];
+  image: string | null;
+  featured: boolean;
+  services: string[];
 }
 
 const ListingCard: React.FC<ListingCardProps> = ({
@@ -68,23 +68,21 @@ const ListingCard: React.FC<ListingCardProps> = ({
         <p className="mt-2 text-sm text-gray-600">{short_description}</p>
         
         {/* Services */}
-        {services && services.length > 0 && (
-          <div className="flex flex-wrap gap-1 mt-3">
-            {services.slice(0, 3).map((service) => (
-              <span 
-                key={service} 
-                className="px-2 py-1 text-xs bg-gray-100 rounded-full text-gray-700"
-              >
-                {service}
-              </span>
-            ))}
-            {services.length > 3 && (
-              <span className="px-2 py-1 text-xs bg-gray-100 rounded-full text-gray-700">
-                +{services.length - 3} more
-              </span>
-            )}
-          </div>
-        )}
+        <div className="flex flex-wrap gap-1 mt-3">
+          {services.slice(0, 3).map((service) => (
+            <span 
+              key={service} 
+              className="px-2 py-1 text-xs bg-gray-100 rounded-full text-gray-700"
+            >
+              {service}
+            </span>
+          ))}
+          {services.length > 3 && (
+            <span className="px-2 py-1 text-xs bg-gray-100 rounded-full text-gray-700">
+              +{services.length - 3} more
+            </span>
+          )}
+        </div>
         
         {/* Contact */}
         <div className="flex items-center justify-between mt-4 pt-4 border-t border-gray-100">

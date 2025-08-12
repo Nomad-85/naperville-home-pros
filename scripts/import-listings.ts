@@ -55,7 +55,7 @@ async function importListings() {
   try {
     // Define file paths
     const csvPath = path.join(process.cwd(), 'data', 'listings.csv');
-    const jsonPath = path.join(process.cwd(), 'data', 'listings.json');
+    const jsonPath = path.join(process.cwd(), 'src', 'data', 'listings.json');
     
     // Check if CSV file exists
     if (!fs.existsSync(csvPath)) {
@@ -129,8 +129,11 @@ async function importListings() {
         services: record.services ? record.services.split('|').map(s => s.trim()) : [],
         service_areas: record.service_areas ? record.service_areas.split('|').map(s => s.trim()) : [],
         hours: record.hours || null,
-        image: record.image ? (record.image.startsWith('http') ? record.image : `/static/providers/${record.image}`) : null,
-        city: record.city
+        image: record.image ? `/static/providers/${record.image}` : null,
+        city: record.city,
+        address: record.address || undefined,
+        email: record.email || undefined,
+        notes: record.notes || undefined
       };
       
       // Check for duplicate slugs within the same category
@@ -171,10 +174,8 @@ async function importListings() {
     
     // Print results
     console.log(`\nImport completed:`);
-    console.log(`- ${records.length} rows read`);
     console.log(`- ${processedRecords.length} records processed`);
     console.log(`- ${mergedListings.length} total listings in output file`);
-    console.log(`- ${errors.length} rows skipped due to errors`);
     
     if (errors.length > 0) {
       console.error('\nErrors:');

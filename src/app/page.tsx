@@ -26,7 +26,6 @@ export const viewport = buildViewport({
 export default function Home() {
   // Get featured listings
   const featuredListings = getFeaturedListings(6);
-  console.log('[build] featured:', getFeaturedListings().length);
   
   // Get recent blog posts (placeholder for now)
   const recentPosts = [
@@ -125,7 +124,7 @@ export default function Home() {
                 name={listing.name}
                 slug={listing.slug}
                 category={listing.category}
-                city={listing.city || ''}
+                city={listing.city}
                 short_description={listing.short_description}
                 phone={listing.phone}
                 image={listing.image}

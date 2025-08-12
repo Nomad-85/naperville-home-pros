@@ -8,7 +8,7 @@ import FeaturedBadge from '@/components/FeaturedBadge';
 import categories from '@/data/categories.json';
 import { SEO_CONSTANTS } from '@/lib/seo';
 import { buildMetadata, buildViewport } from '@/components/SchemaMetadata';
-import { getListings, getListingBySlugs } from '@/lib/data';
+import { getListings } from '@/lib/data';
 
 // Export viewport for Next.js 14+
 export const viewport = buildViewport();
@@ -40,18 +40,9 @@ export async function generateMetadata({ params }: BusinessPageProps) {
   
   const category = categories.find(c => c.slug === categorySlug);
   
-  const metadataTitle = `${listing.name} | ${category?.name || categorySlug} in ${listing.city || ''}`;
-  const metadataDescription = listing.short_description;
-  const metadataKeywords = [
-    listing.name,
-    category?.name || categorySlug,
-    listing.city || '',
-    ...(listing.services || []),
-  ].filter(Boolean).join(', ');
-
   return buildMetadata({
-    title: metadataTitle,
-    description: metadataDescription,
+    title: `${listing.name} — ${category?.name || categorySlug} in Naperville & Wheaton`,
+    description: `Contact ${listing.name} for ${listing.services.slice(0, 2).join(', ')}. Serving Naperville & Wheaton.`,
     path: `/${categorySlug}/${businessSlug}`,
     image: listing.image ? { url: listing.image } : undefined,
     ogType: 'website'
@@ -87,8 +78,10 @@ export default function BusinessPage({ params }: BusinessPageProps) {
   const { category: categorySlug, business: businessSlug } = params;
   
   // Find the listing using the data helper
-  const listing = getListingBySlugs(categorySlug, businessSlug);
-  console.log(`[build] business ${categorySlug}/${businessSlug}`, listing ? 'found' : 'not found');
+  const listings = getListings();
+  const listing = listings.find(
+    listing => listing.category === categorySlug && listing.slug === businessSlug
+  );
   
   // If listing doesn't exist, return 404
   if (!listing) {
@@ -154,30 +147,26 @@ export default function BusinessPage({ params }: BusinessPageProps) {
             <div className="prose max-w-none">
               <p className="text-lg">{listing.short_description}</p>
               
-              {listing.services && listing.services.length > 0 && (
-                <div className="mt-6">
-                  <h3 className="text-lg font-semibold text-gray-900">Services</h3>
-                  <div className="flex flex-wrap gap-2 mt-2">
-                    {listing.services.map((service) => (
-                      <span
-                        key={service}
-                        className="px-3 py-1 text-sm bg-gray-100 rounded-full text-gray-700"
-                      >
-                        {service}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              )}
+              <h2 className="text-2xl font-bold mt-8 mb-4">Services</h2>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                {listing.services.map((service) => (
+                  <li key={service} className="flex items-center">
+                    <svg className="w-5 h-5 mr-2 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    {service}
+                  </li>
+                ))}
+              </ul>
               
-              {listing.service_areas && listing.service_areas.length > 0 && (
-                <div className="mt-6">
-                  <h3 className="text-lg font-semibold text-gray-900">Service Areas</h3>
-                  <p className="mt-2 text-gray-600">
-                    {listing.service_areas.join(', ')}
-                  </p>
-                </div>
-              )}
+              <h2 className="text-2xl font-bold mt-8 mb-4">Service Areas</h2>
+              <div className="flex flex-wrap gap-2">
+                {listing.service_areas.map((area) => (
+                  <span key={area} className="px-3 py-1 bg-gray-100 rounded-full text-gray-700">
+                    {area}
+                  </span>
+                ))}
+              </div>
               
               <h2 className="text-2xl font-bold mt-8 mb-4">About {listing.name}</h2>
               <p>
@@ -235,12 +224,10 @@ export default function BusinessPage({ params }: BusinessPageProps) {
               </div>
               
               {/* Service Areas */}
-              {listing.service_areas && listing.service_areas.length > 0 && (
-                <div className="mb-4">
-                  <h3 className="text-sm font-medium text-gray-500">Areas Served</h3>
-                  <p className="mt-1">{listing.service_areas.join(', ')}</p>
-                </div>
-              )}
+              <div className="mb-4">
+                <h3 className="text-sm font-medium text-gray-500">Areas Served</h3>
+                <p className="mt-1">{listing.service_areas.join(', ')}</p>
+              </div>
               
               {/* Request Quote Form */}
               <div className="mt-6 pt-6 border-t border-gray-200">
@@ -314,7 +301,7 @@ export default function BusinessPage({ params }: BusinessPageProps) {
             More {category.name || categorySlug} in {listing.city}
           </h2>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {getListings()
+            {listings
               .filter(l => l.category === categorySlug && l.slug !== businessSlug)
               .slice(0, 3)
               .map((relatedListing) => (
