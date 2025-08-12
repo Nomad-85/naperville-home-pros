@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Metadata } from 'next';
 import { JsonLd } from '@/components/JsonLd';
 import Search from '@/components/Search';
@@ -30,20 +31,34 @@ export default function CategoriesPage() {
       </section>
 
       {/* Categories Grid */}
-      <section className="container py-8">
+      <section className="container py-8 md:py-12">
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {categories.map((category) => (
             <Link
               key={category.slug}
               href={`/${category.slug}`}
-              className="block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow"
+              className="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden"
             >
-              <h2 className="text-xl font-semibold text-gray-900">{category.name}</h2>
-              <p className="mt-2 text-gray-600">
-                Find the best {category.name.toLowerCase()} in Naperville & Wheaton
-              </p>
-              <div className="mt-4 text-primary-600 font-medium">
-                View {category.name} →
+              <div className="aspect-[3/2] overflow-hidden rounded-xl w-full relative">
+                <Image 
+                  src={category.image || "/static/placeholders/category.jpg" || "/static/og-default.jpg"}
+                  alt={`${category.name} in Naperville & Wheaton`}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
+                <div className="absolute inset-0 bg-gray-900 opacity-40"></div>
+                <h2 className="absolute inset-0 z-10 flex items-center justify-center text-xl font-bold text-white text-center">
+                  {category.name}
+                </h2>
+              </div>
+              <div className="p-6">
+                <p className="text-gray-600">
+                  Find the best {category.name.toLowerCase()} in Naperville & Wheaton
+                </p>
+                <div className="mt-4 text-primary-600 font-medium">
+                  View {category.name} →
+                </div>
               </div>
             </Link>
           ))}

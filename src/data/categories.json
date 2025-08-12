@@ -1,8 +1,8 @@
 [
-  {"slug":"plumbers","name":"Plumbers"},
-  {"slug":"electricians","name":"Electricians"},
-  {"slug":"roofers","name":"Roofers"},
-  {"slug":"hvac","name":"HVAC"},
+  {"slug":"plumbers","name":"Plumbers","image":"/static/categories/plumbers.webp"},
+  {"slug":"electricians","name":"Electricians","image":"/static/categories/electricians.webp"},
+  {"slug":"roofers","name":"Roofers","image":"/static/categories/roofers.webp"},
+  {"slug":"hvac","name":"HVAC","image":"/static/categories/hvac.webp"},
   {"slug":"landscapers","name":"Landscapers"},
   {"slug":"painters","name":"Painters"},
   {"slug":"flooring","name":"Flooring"},

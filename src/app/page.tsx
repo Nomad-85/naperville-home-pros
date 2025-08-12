@@ -74,20 +74,29 @@ export default function Home() {
       </section>
 
       {/* Featured Categories */}
-      <section className="py-12 bg-gray-50">
+      <section className="py-8 md:py-12 bg-gray-50">
         <div className="container">
           <h2 className="text-2xl font-bold text-gray-900 mb-8">Featured Categories</h2>
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {categories.map((category) => (
               <Link
                 key={category.slug}
                 href={`/${category.slug}`}
-                className="group relative flex items-center justify-center h-32 overflow-hidden bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow"
+                className="group relative flex items-center justify-center overflow-hidden bg-white rounded-lg shadow-md transition-shadow hover:shadow-lg"
               >
-                <div className="absolute inset-0 bg-gray-900 opacity-40 group-hover:opacity-50 transition-opacity"></div>
-                <h3 className="relative z-10 text-xl font-bold text-white text-center">
-                  {category.name}
-                </h3>
+                <div className="aspect-[3/2] overflow-hidden rounded-xl w-full relative">
+                  <Image 
+                    src={category.image || "/static/placeholders/category.jpg" || "/static/og-default.jpg"}
+                    alt={`${category.name} in Naperville & Wheaton`}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                  <div className="absolute inset-0 bg-gray-900 opacity-40 group-hover:opacity-50 transition-opacity"></div>
+                  <h3 className="absolute inset-0 z-10 flex items-center justify-center text-xl font-bold text-white text-center">
+                    {category.name}
+                  </h3>
+                </div>
               </Link>
             ))}
           </div>
