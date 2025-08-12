@@ -69,7 +69,7 @@ export default function Home() {
       </section>
 
       {/* Search Section */}
-      <section className="container -mt-8 mb-12">
+      <section className="container -mt-8 mb-12 relative z-10">
         <Search categories={categories} />
       </section>
 
