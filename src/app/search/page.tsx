@@ -12,12 +12,7 @@ interface SearchPageProps {
   searchParams: { q?: string };
 }
 
-// Set robots metadata separately
-export const robots = {
-  index: false, // Don't index search results pages
-  follow: true,
-};
-
+// Export viewport for Next.js 14+
 export const viewport = buildViewport({
   themeColor: '#4f46e5'
 });
@@ -34,15 +29,30 @@ export async function generateMetadata({ searchParams }: SearchPageProps): Promi
     ogType: 'website'
   });
   
-  if (!query) return defaultMetadata;
+  // Add robots metadata (don't index search pages)
+  const metadataWithRobots = {
+    ...defaultMetadata,
+    robots: {
+      index: false,
+      follow: true,
+    }
+  };
+  
+  if (!query) return metadataWithRobots;
   
   // Custom metadata for search results
-  return buildMetadata({
-    title: `Search results for "${query}" | Naperville Home Pros`,
-    description: `Search results for home service professionals in Naperville and Wheaton, IL matching "${query}"`,
-    path: `/search?q=${query}`,
-    ogType: 'website'
-  });
+  return {
+    ...buildMetadata({
+      title: `Search results for "${query}" | Naperville Home Pros`,
+      description: `Search results for home service professionals in Naperville and Wheaton, IL matching "${query}"`,
+      path: `/search?q=${query}`,
+      ogType: 'website'
+    }),
+    robots: {
+      index: false,
+      follow: true,
+    }
+  };
 }
 
 // Function to get search results using the data helper
