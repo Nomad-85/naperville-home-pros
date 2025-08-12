@@ -32,9 +32,9 @@ const ListingCard: React.FC<ListingCardProps> = ({
     <div className={featured ? 'card-featured' : 'card'}>
       <div className="relative">
         {/* Image */}
-        <div className="relative h-48 w-full">
+        <div className="aspect-[3/2] overflow-hidden rounded-xl w-full relative">
           <Image
-            src={image}
+            src={image || "/static/placeholders/listing.jpg"}
             alt={name}
             fill
             className="object-cover"

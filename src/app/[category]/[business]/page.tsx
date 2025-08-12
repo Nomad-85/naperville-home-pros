@@ -117,8 +117,14 @@ export default function BusinessPage({ params }: BusinessPageProps) {
           {/* Main Content */}
           <div className="lg:col-span-2">
             {/* Image */}
-            <div className="relative h-64 w-full rounded-lg overflow-hidden mb-6">
-              <div className="absolute inset-0 bg-gray-200"></div>
+            <div className="aspect-[3/2] overflow-hidden rounded-xl w-full relative mb-6">
+              <Image
+                src={listing.image || "/static/placeholders/listing.jpg"}
+                alt={listing.name}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 66vw, 50vw"
+              />
             </div>
             
             {/* Description */}
@@ -317,7 +323,7 @@ export default function BusinessPage({ params }: BusinessPageProps) {
           "@context": "https://schema.org",
           "@type": getBusinessType(categorySlug),
           "name": listing.name,
-          "image": `${SEO_CONSTANTS.DOMAIN}${listing.image}`,
+          "image": `${SEO_CONSTANTS.DOMAIN}${listing.image || "/static/placeholders/listing.jpg"}`,
           "telephone": listing.phone,
           "url": `${SEO_CONSTANTS.DOMAIN}/${listing.category}/${listing.slug}`,
           "address": {
