@@ -1,5 +1,5 @@
 // src/components/SchemaMetadata.tsx
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 
 type OGType =
   | 'website'
@@ -29,9 +29,24 @@ interface MetaInput {
   };
   locale?: string;             // default "en_US"
   alternates?: Record<string, string>; // { "en-US": "/en", "es-ES": "/es" }
+  themeColor?: string;         // default "#ffffff"
 }
 
 const BASE_URL = 'https://napervillehomepros.com';
+
+// Separate interface for viewport-only properties
+interface ViewportInput {
+  themeColor?: string;
+}
+
+export function buildViewport(input?: ViewportInput): Viewport {
+  return {
+    themeColor: input?.themeColor || '#ffffff',
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 1,
+  };
+}
 
 export function buildMetadata(input: MetaInput): Metadata {
   const {

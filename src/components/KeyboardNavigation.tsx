@@ -36,15 +36,16 @@ const KeyboardNavigation: React.FC<KeyboardNavigationProps> = ({
         if (!(el instanceof HTMLElement)) return false;
         
         // Check for disabled property on form elements
-        const isDisabled = (
-          (el instanceof HTMLButtonElement || 
-           el instanceof HTMLInputElement || 
-           el instanceof HTMLSelectElement || 
-           el instanceof HTMLTextAreaElement || 
-           el instanceof HTMLOptGroupElement || 
-           el instanceof HTMLOptionElement) && 
-          el.disabled
-        );
+        let isDisabled = false;
+        
+        if (el instanceof HTMLButtonElement || 
+            el instanceof HTMLInputElement || 
+            el instanceof HTMLSelectElement || 
+            el instanceof HTMLTextAreaElement || 
+            el instanceof HTMLOptGroupElement || 
+            el instanceof HTMLOptionElement) {
+          isDisabled = el.disabled;
+        }
         
         return !isDisabled && 
           el.style.display !== 'none' && 
