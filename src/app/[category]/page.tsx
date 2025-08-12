@@ -1,16 +1,14 @@
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { notFound } from 'next/navigation';
-import { Metadata } from 'next';
-import { buildMetadata, buildViewport } from '@/components/SchemaMetadata';
-import { SEO_CONSTANTS } from '@/lib/seo';
-import ListingCard from '@/components/ListingCard';
 import Breadcrumbs from '@/components/Breadcrumbs';
-import CTASection from '@/components/CTASection';
+import ListingCard from '@/components/ListingCard';
 import { JsonLd } from '@/components/JsonLd';
-import { getListingsByCategory } from '@/lib/data';
+import CTASection from '@/components/CTASection';
 import categories from '@/data/categories.json';
+import listings from '@/data/listings.json';
+import { SEO_CONSTANTS } from '@/lib/seo';
+import { buildMetadata } from '@/components/SchemaMetadata';
 
 interface CategoryPageProps {
   params: {
@@ -259,8 +257,8 @@ export default function CategoryPage({ params, searchParams }: CategoryPageProps
   // Get content for this category (or use default)
   const categoryContent = categoryIntros[categorySlug] || defaultCategoryContent;
   
-  // Get listings by category using the data helper
-  let categoryListings = getListingsByCategory(categorySlug);
+  // Get listings for this category
+  let categoryListings = listings.filter(listing => listing.category === categorySlug);
   
   // Filter by search query if provided
   if (searchQuery) {
@@ -274,7 +272,7 @@ export default function CategoryPage({ params, searchParams }: CategoryPageProps
   }
   
   // Sort listings: featured first, then alphabetically
-  categoryListings = categoryListings.sort((a, b) => {
+  categoryListings.sort((a, b) => {
     if (a.featured && !b.featured) return -1;
     if (!a.featured && b.featured) return 1;
     return a.name.localeCompare(b.name);
@@ -386,13 +384,13 @@ export default function CategoryPage({ params, searchParams }: CategoryPageProps
               className="block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow"
             >
               <h3 className="text-xl font-semibold text-gray-900">
-                {relatedCategory.name || relatedCategory.slug}
+                {relatedCategory.name}
               </h3>
               <p className="mt-2 text-gray-600">
-                Find the best {relatedCategory.name?.toLowerCase() || relatedCategory.slug} in Naperville & Wheaton
+                Find the best {relatedCategory.name.toLowerCase()} in Naperville & Wheaton
               </p>
               <div className="mt-4 text-primary-600 font-medium">
-                View {relatedCategory.name || relatedCategory.slug} →
+                View {relatedCategory.name} →
               </div>
             </Link>
           ))}
@@ -413,7 +411,7 @@ export default function CategoryPage({ params, searchParams }: CategoryPageProps
             "item": {
               "@type": "LocalBusiness",
               "name": listing.name,
-              "image": `${SEO_CONSTANTS.DOMAIN}${listing.image || '/images/placeholder.jpg'}`,
+              "image": `${SEO_CONSTANTS.DOMAIN}${listing.image}`,
               "telephone": listing.phone,
               "url": `${SEO_CONSTANTS.DOMAIN}/${listing.category}/${listing.slug}`,
               "address": {

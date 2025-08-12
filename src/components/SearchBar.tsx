@@ -57,20 +57,20 @@ export default function SearchBar({
       // In a real implementation, this would be an API call
       // For now, we'll simulate a search with setTimeout
       setTimeout(() => {
-        // Use the data helper to get listings
-        import('@/lib/data').then(({ getListings }) => {
-          const listings = getListings();
-          const filtered = listings.filter((listing) => 
+        // This would be replaced with actual search logic
+        import('@/data/listings.json').then((module) => {
+          const listings = module.default;
+          const filtered = listings.filter((listing: any) => 
             listing.name.toLowerCase().includes(value.toLowerCase()) ||
-            listing.short_description.toLowerCase().includes(value.toLowerCase()) ||
-            listing.category.toLowerCase().includes(value.toLowerCase())
-          ).slice(0, 5).map((listing) => ({
-            id: listing.slug,
+            listing.description.toLowerCase().includes(value.toLowerCase()) ||
+            listing.category.name.toLowerCase().includes(value.toLowerCase())
+          ).slice(0, 5).map((listing: any) => ({
+            id: listing.id,
             name: listing.name,
-            category: listing.category,
-            categorySlug: listing.category,
+            category: listing.category.name,
+            categorySlug: listing.category.slug,
             slug: listing.slug,
-            description: listing.short_description
+            description: listing.description.substring(0, 100) + '...'
           }));
           
           setResults(filtered);
