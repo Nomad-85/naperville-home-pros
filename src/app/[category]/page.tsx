@@ -261,6 +261,7 @@ export default function CategoryPage({ params, searchParams }: CategoryPageProps
   
   // Get listings by category using the data helper
   let categoryListings = getListingsByCategory(categorySlug);
+  console.log('[build] category', categorySlug, categoryListings.length);
   
   // Filter by search query if provided
   if (searchQuery) {
@@ -268,8 +269,8 @@ export default function CategoryPage({ params, searchParams }: CategoryPageProps
     categoryListings = categoryListings.filter(listing => 
       listing.name.toLowerCase().includes(query) || 
       listing.short_description.toLowerCase().includes(query) ||
-      listing.services.some(service => service.toLowerCase().includes(query)) ||
-      listing.service_areas.some(area => area.toLowerCase().includes(query))
+      listing.services?.some(service => service.toLowerCase().includes(query)) ||
+      listing.service_areas?.some(area => area.toLowerCase().includes(query))
     );
   }
   
@@ -328,7 +329,7 @@ export default function CategoryPage({ params, searchParams }: CategoryPageProps
                 name={listing.name}
                 slug={listing.slug}
                 category={listing.category}
-                city={listing.city}
+                city={listing.city || ''}
                 short_description={listing.short_description}
                 phone={listing.phone}
                 image={listing.image}
@@ -366,6 +367,7 @@ export default function CategoryPage({ params, searchParams }: CategoryPageProps
                   <p className="mt-2 text-gray-600">
                     {faq.answer}
                   </p>
+
                 </div>
               ))}
             </div>

@@ -1,29 +1,26 @@
-import listings from '../data/listings.json';
+import listings from '../../data/listings.json';
 
 // Define the Listing type if not already imported
-export interface Listing {
+export type Listing = {
   category: string;
-  featured: boolean;
-  name: string;
   slug: string;
+  name: string;
   phone: string;
-  website: string | null;
+  website?: string | null;
   short_description: string;
-  services: string[];
-  service_areas: string[];
-  hours: string | null;
-  image: string | null;
-  city: string;
-  address?: string;
-  email?: string;
-  notes?: string;
-}
+  services?: string[];
+  service_areas?: string[];
+  hours?: string | null;
+  image?: string | null;
+  city?: string;
+  featured?: boolean;
+};
 
 /**
  * Get all listings from the data source
  */
 export function getListings(): Listing[] {
-  return listings as unknown as Listing[];
+  return listings as Listing[];
 }
 
 /**
@@ -40,4 +37,11 @@ export function getFeaturedListings(limit = 6): Listing[] {
   return getListings()
     .filter(l => l.featured === true)
     .slice(0, limit);
+}
+
+/**
+ * Get a specific listing by category and slug
+ */
+export function getListingBySlugs(category: string, slug: string): Listing | undefined {
+  return getListings().find(l => l.category === category && l.slug === slug);
 }
