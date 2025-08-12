@@ -7,15 +7,15 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "import:listings": "ts-node scripts/import-listings.ts"
+    "import:listings": "node scripts/run-import-listings.cjs"
   },
   "dependencies": {
-    "next": "^14.2.31",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
     "@axe-core/react": "^4.7.3",
     "focus-trap-react": "^10.2.3",
+    "next": "^14.2.31",
+    "react": "^18.3.1",
     "react-aria": "^3.30.0",
+    "react-dom": "^18.3.1",
     "workbox-window": "^7.0.0"
   },
   "devDependencies": {
@@ -23,7 +23,7 @@
     "@types/react": "^18.3.5",
     "@types/react-dom": "^18.3.0",
     "autoprefixer": "^10.4.16",
-    "csv-parse": "^5.5.5",
+    "csv-parse": "^5.6.0",
     "eslint": "^8.57.0",
     "eslint-config-next": "^14.2.0",
     "postcss": "^8.4.32",
