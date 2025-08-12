@@ -6,7 +6,7 @@
     "short_description":"For over three decades, Andersen Plumbing & Heating has been the go-to name for the Fox Valley area’s reliable plumbing, heating, and air conditioning services. Established in 1985, we have built a strong reputation for quality workmanship, integrity, and unmatched expertise in the industry. As your trusted local contractor, we are committed to delivering efficient solutions and exceptional customer service for every project – big or small.",
     "services":["Emergency leaks","Water heaters","Drain cleaning","Sump pumps"],
     "service_areas":["Naperville","Wheaton","Lisle"],
-    "hours":"Mon–Sun Open 24 hours","image":"/static/listings/plumbers/anderson-plumbing-logo.webp","city":"Aurora"
+    "hours":"Mon–Sun Open 24 hours","image":"/static/listings/plumbers/andersen-plumbing-heating-logo.webp","city":"Aurora"
   },
   {
     "category":"plumbers","featured":false,
