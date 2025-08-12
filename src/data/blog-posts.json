@@ -1,5 +1,41 @@
 [
   {
+    "id": "top-10-plumbers-in-naperville-2025-update",
+    "title": "Top 10 Plumbers in Naperville (2025 Update)",
+    "slug": "top-10-plumbers-in-naperville-2025-update",
+    "date": "2025-08-01",
+    "author": "Sarah Johnson",
+    "category": "plumbers",
+    "excerpt": "Our updated guide to the top plumbing companies in Naperville for 2025, with proven track records and reliable service.",
+    "content": "<p>Finding a reliable plumber in Naperville can be challenging, especially when you're dealing with an emergency situation. To help you make an informed decision, we've compiled this updated list of the top 10 plumbing companies in Naperville for 2025, based on customer reviews, service quality, and reliability.</p>",
+    "image": "/static/blog/plumbers-2025.webp",
+    "tags": ["Plumbers", "Naperville", "Home Services", "2025 Guide"]
+  },
+  {
+    "id": "how-to-choose-a-roofing-contractor-in-wheaton",
+    "title": "How to Choose a Roofing Contractor in Wheaton",
+    "slug": "how-to-choose-a-roofing-contractor-in-wheaton",
+    "date": "2025-07-15",
+    "author": "Michael Chen",
+    "category": "roofers",
+    "excerpt": "Learn how to select the right roofing contractor in Wheaton, what questions to ask, and red flags to avoid.",
+    "content": "<p>Your roof is one of the most important components of your home, protecting everything inside from the elements. When it's time for repairs or replacement, choosing the right roofing contractor in Wheaton is crucial for ensuring quality workmanship and long-lasting results.</p>",
+    "image": "/static/blog/roofing-tips.webp",
+    "tags": ["Roofing", "Wheaton", "Contractor Selection", "Home Maintenance"]
+  },
+  {
+    "id": "naperville-hvac-repair-vs-replace-guide",
+    "title": "Naperville HVAC: Repair vs Replace — What to Know Before Winter",
+    "slug": "naperville-hvac-repair-vs-replace-guide",
+    "date": "2025-06-22",
+    "author": "David Wilson",
+    "category": "hvac",
+    "excerpt": "A guide for Naperville homeowners on whether to repair or replace your HVAC system before the winter months.",
+    "content": "<p>As winter approaches in Naperville, ensuring your home's heating system is in optimal condition becomes a priority. For many homeowners, the question arises: should you repair your existing HVAC system or invest in a complete replacement?</p>",
+    "image": "/static/blog/hvac-repair-replace.webp",
+    "tags": ["HVAC", "Winter Preparation", "Home Heating", "Naperville"]
+  },
+  {
     "id": "choosing-right-hvac-contractor",
     "title": "How to Choose the Right HVAC Contractor in Naperville",
     "slug": "choosing-right-hvac-contractor",

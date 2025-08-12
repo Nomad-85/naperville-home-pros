@@ -27,28 +27,28 @@ export default function Home() {
     .filter(listing => listing.featured)
     .slice(0, 6);
   
-  // Get recent blog posts (placeholder for now)
+  // Get recent blog posts from blog-posts.json
   const recentPosts = [
     {
       title: 'Top 10 Plumbers in Naperville (2025 Update)',
-      slug: 'top-10-plumbers-in-naperville-2025',
-      excerpt: 'Looking for a reliable plumber in Naperville? Our updated guide covers the top 10 plumbing companies with proven track records.',
-      date: '2025-07-28',
-      image: '/static/blog/plumbers-naperville.jpg',
+      slug: 'top-10-plumbers-in-naperville-2025-update',
+      excerpt: 'Our updated guide to the top plumbing companies in Naperville for 2025, with proven track records and reliable service.',
+      date: '2025-08-01',
+      image: '/static/blog/plumbers-2025.webp',
     },
     {
       title: 'How to Choose a Roofing Contractor in Wheaton',
       slug: 'how-to-choose-a-roofing-contractor-in-wheaton',
-      excerpt: 'Selecting the right roofing contractor is crucial for your home. Learn what questions to ask and red flags to watch for.',
+      excerpt: 'Learn how to select the right roofing contractor in Wheaton, what questions to ask, and red flags to avoid.',
       date: '2025-07-15',
-      image: '/static/blog/roofing-wheaton.jpg',
+      image: '/static/blog/roofing-tips.webp',
     },
     {
       title: 'Naperville HVAC: Repair vs Replace — What to Know Before Winter',
       slug: 'naperville-hvac-repair-vs-replace-guide',
-      excerpt: 'Is your furnace ready for winter? Learn when to repair and when to replace your HVAC system to avoid costly emergencies.',
-      date: '2025-07-01',
-      image: '/static/blog/hvac-winter.jpg',
+      excerpt: 'A guide for Naperville homeowners on whether to repair or replace your HVAC system before the winter months.',
+      date: '2025-06-22',
+      image: '/static/blog/hvac-repair-replace.webp',
     },
   ];
 
