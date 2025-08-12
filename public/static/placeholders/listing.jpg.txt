@@ -1,9 +1,0 @@
-This is a placeholder text file that represents a listing.jpg image.
-In a real implementation, this would be an actual JPG image file.
-When deployed, replace this text file with a real image file named listing.jpg.
-
-The image should be:
-- Aspect ratio: 3:2 (landscape)
-- Resolution: At least 600x400px
-- Content: A placeholder image for service providers
-- Style: Consistent with the site's branding
