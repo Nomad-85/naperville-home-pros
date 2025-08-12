@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import listings from '@/data/listings.json';
+import { getListings } from '@/lib/data';
 import categories from '@/data/categories.json';
 import blogs from '@/data/blogs.json';
 
@@ -39,11 +39,12 @@ export async function GET() {
   </url>`;
     });
 
-    // Add business listing pages
-    listings.forEach((listing: any) => {
+    // Add business listing pages - use the data helper for single source of truth
+    const listings = getListings();
+    listings.forEach((listing) => {
       xml += `
   <url>
-    <loc>${BASE_URL}/${listing.category.slug}/${listing.slug}</loc>
+    <loc>${BASE_URL}/${listing.category}/${listing.slug}</loc>
     <lastmod>${getCurrentDate()}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

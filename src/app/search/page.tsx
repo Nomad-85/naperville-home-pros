@@ -5,47 +5,65 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import SearchBar from '@/components/SearchBar';
 import OptimizedImage from '@/components/OptimizedImage';
 import StructuredData from '@/components/StructuredData';
+import { getListings, Listing } from '@/lib/data';
+import { buildMetadata, buildViewport } from '@/components/SchemaMetadata';
 
 interface SearchPageProps {
   searchParams: { q?: string };
 }
 
-// Generate metadata for the search page
+export const metadata = buildMetadata({
+  title: 'Search | Naperville Home Pros',
+  description: 'Search for home service professionals in Naperville and Wheaton, IL',
+  path: '/search',
+  ogType: 'website'
+});
+
+// Set robots metadata separately
+export const robots = {
+  index: false, // Don't index search results pages
+  follow: true,
+};
+
+export const viewport = buildViewport({
+  themeColor: '#4f46e5'
+});
+
+// Generate dynamic metadata for the search page
 export async function generateMetadata({ searchParams }: SearchPageProps): Promise<Metadata> {
   const query = searchParams.q || '';
   
-  return {
-    title: query ? `Search results for "${query}" | Naperville Home Pros` : 'Search | Naperville Home Pros',
-    description: `Search results for home service professionals in Naperville and Wheaton, IL${query ? ` matching "${query}"` : ''}`,
-    robots: {
-      index: false, // Don't index search results pages
-      follow: true,
-    },
-  };
+  if (!query) return metadata;
+  
+  return buildMetadata({
+    title: `Search results for "${query}" | Naperville Home Pros`,
+    description: `Search results for home service professionals in Naperville and Wheaton, IL matching "${query}"`,
+    path: `/search?q=${query}`,
+    ogType: 'website'
+  });
 }
 
-// Mock function to simulate search results
+// Function to get search results using the data helper
 async function getSearchResults(query: string) {
   'use server';
   
-  // In a real implementation, this would be an API call or database query
-  // For now, we'll import the listings data directly
-  const listings = (await import('@/data/listings.json')).default;
-  
   if (!query) return [];
   
-  return listings.filter((listing: any) => 
+  // Use the data helper to get all listings
+  const listings = getListings();
+  
+  return listings.filter((listing: Listing) => 
     listing.name.toLowerCase().includes(query.toLowerCase()) ||
-    listing.description.toLowerCase().includes(query.toLowerCase()) ||
-    listing.category.name.toLowerCase().includes(query.toLowerCase())
-  ).map((listing: any) => ({
-    id: listing.id,
+    listing.short_description.toLowerCase().includes(query.toLowerCase()) ||
+    listing.category.toLowerCase().includes(query.toLowerCase())
+  ).map((listing: Listing) => ({
+    id: listing.slug, // Use slug as ID
     name: listing.name,
-    category: listing.category.name,
-    categorySlug: listing.category.slug,
+    category: listing.category,
+    categorySlug: listing.category,
     slug: listing.slug,
-    description: listing.description,
-    image: listing.image || '/images/placeholder.jpg',
+    description: listing.short_description,
+    image: listing.image || '/static/placeholders/listing.jpg',
     featured: listing.featured || false,
   }));
 }

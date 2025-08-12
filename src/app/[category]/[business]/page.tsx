@@ -6,9 +6,12 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import { JsonLd } from '@/components/JsonLd';
 import FeaturedBadge from '@/components/FeaturedBadge';
 import categories from '@/data/categories.json';
-import listings from '@/data/listings.json';
 import { SEO_CONSTANTS } from '@/lib/seo';
-import { buildMetadata } from '@/components/SchemaMetadata';
+import { buildMetadata, buildViewport } from '@/components/SchemaMetadata';
+import { getListings } from '@/lib/data';
+
+// Export viewport for Next.js 14+
+export const viewport = buildViewport();
 
 interface BusinessPageProps {
   params: {
@@ -21,6 +24,7 @@ interface BusinessPageProps {
 export async function generateMetadata({ params }: BusinessPageProps) {
   const { category: categorySlug, business: businessSlug } = params;
   
+  const listings = getListings();
   const listing = listings.find(
     listing => listing.category === categorySlug && listing.slug === businessSlug
   );
@@ -37,7 +41,7 @@ export async function generateMetadata({ params }: BusinessPageProps) {
   const category = categories.find(c => c.slug === categorySlug);
   
   return buildMetadata({
-    title: `${listing.name} — ${category?.name} in Naperville & Wheaton`,
+    title: `${listing.name} — ${category?.name || categorySlug} in Naperville & Wheaton`,
     description: `Contact ${listing.name} for ${listing.services.slice(0, 2).join(', ')}. Serving Naperville & Wheaton.`,
     path: `/${categorySlug}/${businessSlug}`,
     image: listing.image ? { url: listing.image } : undefined,
@@ -47,6 +51,7 @@ export async function generateMetadata({ params }: BusinessPageProps) {
 
 // Generate static paths for all businesses
 export async function generateStaticParams() {
+  const listings = getListings();
   return listings.map(listing => ({
     category: listing.category,
     business: listing.slug,
@@ -72,7 +77,8 @@ function getBusinessType(categorySlug: string): string {
 export default function BusinessPage({ params }: BusinessPageProps) {
   const { category: categorySlug, business: businessSlug } = params;
   
-  // Find the listing
+  // Find the listing using the data helper
+  const listings = getListings();
   const listing = listings.find(
     listing => listing.category === categorySlug && listing.slug === businessSlug
   );
@@ -118,13 +124,23 @@ export default function BusinessPage({ params }: BusinessPageProps) {
           <div className="lg:col-span-2">
             {/* Image */}
             <div className="aspect-[3/2] overflow-hidden rounded-xl w-full relative mb-6">
-              <Image
-                src={listing.image || "/static/placeholders/listing.jpg"}
-                alt={listing.name}
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 66vw, 50vw"
-              />
+              {listing.image ? (
+                <Image
+                  src={listing.image}
+                  alt={listing.name}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              ) : (
+                <Image
+                  src="/static/placeholders/listing.jpg"
+                  alt={listing.name}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              )}
             </div>
             
             {/* Description */}
@@ -184,25 +200,27 @@ export default function BusinessPage({ params }: BusinessPageProps) {
               </div>
               
               {/* Website */}
-              <div className="mb-4">
-                <h3 className="text-sm font-medium text-gray-500">Website</h3>
-                <a 
-                  href={listing.website}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center mt-1 text-primary-600 hover:text-primary-700"
-                >
-                  <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                  </svg>
-                  Visit Website
-                </a>
-              </div>
+              {listing.website && (
+                <div className="mb-4">
+                  <h3 className="text-sm font-medium text-gray-500">Website</h3>
+                  <a 
+                    href={listing.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center mt-1 text-primary-600 hover:text-primary-700"
+                  >
+                    <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                    Visit Website
+                  </a>
+                </div>
+              )}
               
               {/* Hours */}
               <div className="mb-4">
                 <h3 className="text-sm font-medium text-gray-500">Business Hours</h3>
-                <p className="mt-1">{listing.hours}</p>
+                <p className="mt-1">{listing.hours || 'Contact for business hours'}</p>
               </div>
               
               {/* Service Areas */}
@@ -280,7 +298,7 @@ export default function BusinessPage({ params }: BusinessPageProps) {
       <section className="py-12 bg-gray-50">
         <div className="container">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">
-            More {category.name} in {listing.city}
+            More {category.name || categorySlug} in {listing.city}
           </h2>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {listings

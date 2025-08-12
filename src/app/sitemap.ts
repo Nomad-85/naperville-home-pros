@@ -1,8 +1,8 @@
 import { MetadataRoute } from 'next';
 import categories from '@/data/categories.json';
-import listings from '@/data/listings.json';
 import blogPosts from '@/data/blog-posts.json';
 import { SEO_CONSTANTS } from '@/lib/seo';
+import { getListings } from '@/lib/data';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = SEO_CONSTANTS.DOMAIN;
@@ -61,8 +61,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  // Listing pages
-  const listingPages = listings.map((listing) => ({
+  // Listing pages - use the data helper for single source of truth
+  const listingPages = getListings().map((listing) => ({
     url: `${baseUrl}/${listing.category}/${listing.slug}`,
     lastModified: new Date(),
     changeFrequency: 'weekly' as const,

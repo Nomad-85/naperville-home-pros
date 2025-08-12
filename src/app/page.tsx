@@ -1,14 +1,16 @@
 import React from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
-import Search from '@/components/Search';
+import Image from 'next/image';
+import { Metadata } from 'next';
+import { buildMetadata, buildViewport } from '@/components/SchemaMetadata';
+import { SEO_CONSTANTS } from '@/lib/seo';
 import ListingCard from '@/components/ListingCard';
+import SearchBar from '@/components/SearchBar';
 import CTASection from '@/components/CTASection';
 import { JsonLd } from '@/components/JsonLd';
+import { getFeaturedListings } from '@/lib/data';
 import categories from '@/data/categories.json';
-import listings from '@/data/listings.json';
-import { SEO_CONSTANTS } from '@/lib/seo';
-import { buildMetadata, buildViewport } from '@/components/SchemaMetadata';
+import blogs from '@/data/blogs.json';
 
 export const metadata = buildMetadata({
   title: 'Home Service Pros in Naperville & Wheaton | Naperville Home Pros',
@@ -23,9 +25,7 @@ export const viewport = buildViewport({
 
 export default function Home() {
   // Get featured listings
-  const featuredListings = listings
-    .filter(listing => listing.featured)
-    .slice(0, 6);
+  const featuredListings = getFeaturedListings(6);
   
   // Get recent blog posts from blog-posts.json
   const recentPosts = [
@@ -70,7 +70,7 @@ export default function Home() {
 
       {/* Search Section */}
       <section className="container -mt-8 mb-12 relative z-10">
-        <Search categories={categories} />
+        <SearchBar placeholder="Search for services or providers..." />
       </section>
 
       {/* Featured Categories */}
@@ -85,18 +85,28 @@ export default function Home() {
                 className="group relative flex items-center justify-center overflow-hidden bg-white rounded-lg shadow-md transition-shadow hover:shadow-lg"
               >
                 <div className="aspect-[3/2] overflow-hidden rounded-xl w-full relative">
-                  <Image 
-                    src={category.image || "/static/placeholders/category.jpg" || "/static/og-default.jpg"}
-                    alt={`${category.name} in Naperville & Wheaton`}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                  />
-                  <div className="absolute inset-0 bg-gray-900 opacity-40 group-hover:opacity-50 transition-opacity"></div>
-                  <h3 className="absolute inset-0 z-10 flex items-center justify-center text-xl font-bold text-white text-center">
-                    {category.name}
-                  </h3>
+                  {category.image ? (
+                    <Image 
+                      src={category.image}
+                      alt={`${category.name || category.slug} in Naperville & Wheaton`}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                    />
+                  ) : (
+                    <Image 
+                      src="/static/placeholders/category.jpg"
+                      alt={`${category.name || category.slug} in Naperville & Wheaton`}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                    />
+                  )}
                 </div>
+                <div className="absolute inset-0 bg-gray-900 opacity-40 group-hover:opacity-50 transition-opacity"></div>
+                <h3 className="absolute inset-0 z-10 flex items-center justify-center text-xl font-bold text-white text-center">
+                  {category.name}
+                </h3>
               </Link>
             ))}
           </div>

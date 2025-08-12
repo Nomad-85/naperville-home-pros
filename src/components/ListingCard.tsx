@@ -12,7 +12,7 @@ interface ListingCardProps {
   city: string;
   short_description: string;
   phone: string;
-  image: string;
+  image: string | null;
   featured: boolean;
   services: string[];
 }
