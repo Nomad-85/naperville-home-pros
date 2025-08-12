@@ -18,15 +18,13 @@ const Header: React.FC = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <div className="relative w-10 h-10">
-              <Image
-                src="/static/logo.png"
-                alt={SEO_CONSTANTS.SITE_NAME}
-                fill
-                className="object-contain"
-                priority
-              />
-            </div>
+            <Image
+              src="/static/logo-512.webp"
+              alt="Naperville Home Pros"
+              width={28}
+              height={28}
+              priority
+            />
             <span className="text-xl font-bold text-primary-700">
               {SEO_CONSTANTS.SITE_NAME}
             </span>

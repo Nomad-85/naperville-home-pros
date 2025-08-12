@@ -23,7 +23,15 @@ export const metadata: Metadata = {
   description: 'Find trusted plumbers, electricians, roofers & more. Compare top local pros in Naperville & Wheaton. Feature your business today.',
   icons: {
     icon: '/favicon.ico',
+    shortcut: ['/favicon-16x16.png', '/favicon-32x32.png'],
     apple: '/apple-touch-icon.png',
+  },
+  openGraph: {
+    images: ['/static/og-default.jpg'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/static/og-default.jpg'],
   },
   manifest: '/manifest.json',
 }
@@ -77,7 +85,7 @@ export default function RootLayout({
               "@type": "Organization",
               "name": "Naperville Home Pros",
               "url": "https://napervillehomepros.com",
-              "logo": "https://napervillehomepros.com/static/logo.png",
+              "logo": "https://napervillehomepros.com/static/logo-512.webp",
               "areaServed": ["Naperville IL", "Wheaton IL"]
             }}
           />
