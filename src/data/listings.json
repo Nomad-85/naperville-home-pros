@@ -6,7 +6,7 @@
     "short_description":"For over three decades, Andersen Plumbing & Heating has been the go-to name for the Fox Valley area’s reliable plumbing, heating, and air conditioning services. Established in 1985, we have built a strong reputation for quality workmanship, integrity, and unmatched expertise in the industry. As your trusted local contractor, we are committed to delivering efficient solutions and exceptional customer service for every project – big or small.",
     "services":["Emergency leaks","Water heaters","Drain cleaning","Sump pumps"],
     "service_areas":["Naperville","Wheaton","Lisle"],
-    "hours":"Mon–Sun Open 24 hours","image":"/static/listings/plumbers/premier.jpg","city":"Aurora"
+    "hours":"Mon–Sun Open 24 hours","image":"/static/listings/plumbers/anderson-plumbing-logo.webp","city":"Aurora"
   },
   {
     "category":"plumbers","featured":false,
@@ -15,7 +15,7 @@
     "short_description":"S and J Plumbing greatly values its customers. As a leader in the plumbing industry, we strive to bring superior plumbing service by means of our employees, products, and technical skills. I would like to personally thank our current and future customers for trusting us with their health and homes as well as those of their families, friends, and neighbors. Customer satisfaction is our number one priority. If for any reason, you are not satisfied with our work we will do whatever it takes to make it right, I guarantee it! No fine print here, just a confident company with a knack for customer satisfaction.",
     "services":["Drain cleaning","Sewer camera","Toilet repair"],
     "service_areas":["Naperville","Warrenville"],
-    "hours":"Mon–Sun Open 24 hours","image":"/static/listings/plumbers/riverwalk.jpg","city":"Arlington Heights"
+    "hours":"Mon–Sun Open 24 hours","image":"/static/listings/plumbers/s-and-j-plumbing-logo.webp","city":"Arlington Heights"
   },
   {
     "category":"plumbers","featured":false,
@@ -24,7 +24,7 @@
     "short_description":"Ken Mounts founded courtesy Plumbing in 1972 with the sole goal of priding cost-effective and personable plumbing services to residents in the Bollingbrook and Romeoville area. Our goals have not changed over the years. However, our company, abilities, and 5-star reviews have increased considerably.",
     "services":["Drain cleaning","Sewer camera","Toilet repair"],
     "service_areas":["Naperville","Warrenville"],
-    "hours":"Mon–Sun Open 24 hours","image":"/static/listings/plumbers/riverwalk.jpg","city":"Bollingbrook"
+    "hours":"Mon–Sun Open 24 hours","image":"/static/listings/plumbers/courtest-plumbing-logo.webp","city":"Bollingbrook"
   },
   {
     "category":"plumbers","featured":false,
@@ -33,7 +33,7 @@
     "short_description":"Your life will be much easier when you have a plumber you can call upon dependably. That is Arco Plumbing to our customers in Westmont, Illinois. Our plumbing company serves the suburbs and business districts. Founded in 1978 and a BBB A+ rated business since 1985, we’ve built a tradition of service to our customers. Whether it’s plumbing emergencies for commercial clients or over-the-phone assistance for residents—we’re always there when someone needs us.",
     "services":["Drain cleaning","Sewer camera","Toilet repair"],
     "service_areas":["Naperville","Warrenville"],
-    "hours":"Mon–Sun Open 24 hours","image":"/static/listings/plumbers/riverwalk.jpg","city":"Westmont"
+    "hours":"Mon–Sun Open 24 hours","image":"/static/listings/plumbers/arco-plumbing-logo.webp","city":"Westmont"
   },
   {
     "category":"electricians","featured":true,
