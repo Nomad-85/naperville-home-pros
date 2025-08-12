@@ -12,13 +12,6 @@ interface SearchPageProps {
   searchParams: { q?: string };
 }
 
-export const metadata = buildMetadata({
-  title: 'Search | Naperville Home Pros',
-  description: 'Search for home service professionals in Naperville and Wheaton, IL',
-  path: '/search',
-  ogType: 'website'
-});
-
 // Set robots metadata separately
 export const robots = {
   index: false, // Don't index search results pages
@@ -33,8 +26,17 @@ export const viewport = buildViewport({
 export async function generateMetadata({ searchParams }: SearchPageProps): Promise<Metadata> {
   const query = searchParams.q || '';
   
-  if (!query) return metadata;
+  // Default metadata for search page
+  const defaultMetadata = buildMetadata({
+    title: 'Search | Naperville Home Pros',
+    description: 'Search for home service professionals in Naperville and Wheaton, IL',
+    path: '/search',
+    ogType: 'website'
+  });
   
+  if (!query) return defaultMetadata;
+  
+  // Custom metadata for search results
   return buildMetadata({
     title: `Search results for "${query}" | Naperville Home Pros`,
     description: `Search results for home service professionals in Naperville and Wheaton, IL matching "${query}"`,
