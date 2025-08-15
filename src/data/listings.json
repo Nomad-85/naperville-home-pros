@@ -28,15 +28,6 @@
   },
   {
     "category":"plumbers","featured":false,
-    "name":"OC Property Solutions Heating, Cooling, Plumbing, & Electric","slug":"oc-property-solutions",
-    "phone":"(630) 233-9892","website":"https://ocpropertysolutions.com/",
-    "short_description":"OC Property Solutions Heating, Cooling, Plumbing, & Electric is a family-owned and operated company that provides a wide range of services to residential and commercial clients in the Naperville area. Our team of experienced professionals is dedicated to delivering top-notch service and solutions to meet the needs of our customers.",
-    "services":["Bathtub installation","Drain installation","Faucet installation","Garbage disposal installation","Gas line installation","Hot water recirculation pump installation","HVAC installation or replacement","HVAC system maintenance","Plumbing installation or replacement","Sewer installation","Shower installation","Sink installation","Sump pump installation","Toilet installation","Water heater installation","Water pipe installation","Bathtub repair","Drain repair","Faucet repair","Garbage disposal repair","Gas line repair","Hot water recirculation pump repair","HVAC system repair","Plumbing inspection","Plumbing repair","Sewer repair","Shower repair","Sink repair","Sump pump repair","Toilet repair","Water heater repair","Water pipe repair"],
-    "service_areas":["Naperville","Wheaton"],
-    "hours":"Mon–Sun Open 24 hours","image":"/static/listings/plumbers/oc-property-solutions-logo.webp","city":"Plainfield"
-  },
-  {
-    "category":"plumbers","featured":false,
     "name":"Arco Plumbing","slug":"arco-plumbing",
     "phone":"(630) 960-5950","website":"https://www.arcoplumbing.com/",
     "short_description":"Your life will be much easier when you have a plumber you can call upon dependably. That is Arco Plumbing to our customers in Westmont, Illinois. Our plumbing company serves the suburbs and business districts. Founded in 1978 and a BBB A+ rated business since 1985, we’ve built a tradition of service to our customers. Whether it’s plumbing emergencies for commercial clients or over-the-phone assistance for residents—we’re always there when someone needs us.",
@@ -46,12 +37,21 @@
   },
   {
     "category":"plumbers","featured":false,
+    "name":"OC Property Solutions Heating, Cooling, Plumbing, & Electric","slug":"oc-property-solutions",
+    "phone":"(630) 233-9892","website":"https://ocpropertysolutions.com/",
+    "short_description":"OC Property Solutions Heating, Cooling, Plumbing, & Electric is a family-owned and operated company that provides a wide range of services to residential and commercial clients in the Naperville area. Our team of experienced professionals is dedicated to delivering top-notch service and solutions to meet the needs of our customers.",
+    "services":["Bathtub installation","Drain installation","Faucet installation","Garbage disposal installation","Gas line installation","Hot water recirculation pump installation","HVAC installation or replacement","HVAC system maintenance","Plumbing installation or replacement","Sewer installation","Shower installation","Sink installation","Sump pump installation","Toilet installation","Water heater installation","Water pipe installation","Bathtub repair","Drain repair","Faucet repair","Garbage disposal repair","Gas line repair","Hot water recirculation pump repair","HVAC system repair","Plumbing inspection","Plumbing repair","Sewer repair","Shower repair","Sink repair","Sump pump repair","Toilet repair","Water heater repair","Water pipe repair"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Plainfield"
+  },
+  {
+    "category":"plumbers","featured":false,
     "name":"Leto Plumbing & Heating, Inc.","slug":"leto-plumbing-and-heating",
     "phone":"(815) 393-5505","website":"https://letoplumbing.com",
     "short_description":"Leto Plumbing & Heating, Inc.",
     "services":["Bathtub installation","Drain installation","Faucet installation","Garbage disposal installation","Gas line installation","Hot water recirculation pump installation","HVAC installation or replacement","HVAC system maintenance","Plumbing installation or replacement","Sewer installation","Shower installation","Sink installation","Sump pump installation","Toilet installation","Water heater installation","Water pipe installation","Bathtub repair","Drain repair","Faucet repair","Garbage disposal repair","Gas line repair","Hot water recirculation pump repair","HVAC system repair","Plumbing inspection","Plumbing repair","Sewer repair","Shower repair","Sink repair","Sump pump repair","Toilet repair","Water heater repair","Water pipe repair"],
     "service_areas":["Naperville","Wheaton"],
-    "hours":"Mon–Sun Open 24 hours","image":"/static/listings/plumbers/oc-property-solutions-logo.webp","city":"Plainfield"
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Plainfield"
   },
   {
     "category":"plumbers","featured":false,
@@ -60,26 +60,116 @@
     "short_description":"Wiz Plumbing Inc.",
     "services":["Bathtub installation","Drain installation","Faucet installation","Garbage disposal installation","Gas line installation","Hot water recirculation pump installation","HVAC installation or replacement","HVAC system maintenance","Plumbing installation or replacement","Sewer installation","Shower installation","Sink installation","Sump pump installation","Toilet installation","Water heater installation","Water pipe installation","Bathtub repair","Drain repair","Faucet repair","Garbage disposal repair","Gas line repair","Hot water recirculation pump repair","HVAC system repair","Plumbing inspection","Plumbing repair","Sewer repair","Shower repair","Sink repair","Sump pump repair","Toilet repair","Water heater repair","Water pipe repair"],
     "service_areas":["Naperville","Wheaton"],
-    "hours":"Mon–Sun Open 24 hours","image":"/static/listings/plumbers/oc-property-solutions-logo.webp","city":"Naperville"
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
+  },
+  {
+    "category":"plumbers","featured":false,
+    "name":"Naperville Plumbing Solution","slug":"naperville-plumbing-solution",
+    "phone":"(331) 204-4627","website":"",
+    "short_description":"Naperville Plumbing Solution",
+    "services":["Bathtub installation","Drain installation","Faucet installation","Garbage disposal installation","Gas line installation","Hot water recirculation pump installation","HVAC installation or replacement","HVAC system maintenance","Plumbing installation or replacement","Sewer installation","Shower installation","Sink installation","Sump pump installation","Toilet installation","Water heater installation","Water pipe installation","Bathtub repair","Drain repair","Faucet repair","Garbage disposal repair","Gas line repair","Hot water recirculation pump repair","HVAC system repair","Plumbing inspection","Plumbing repair","Sewer repair","Shower repair","Sink repair","Sump pump repair","Toilet repair","Water heater repair","Water pipe repair"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
+  },
+  {
+    "category":"plumbers","featured":false,
+    "name":"Modern Plumbing","slug":"modern-plumbing",
+    "phone":"(708) 888-0160","website":"https://modernplumbingllc.com",
+    "short_description":"Modern Plumbing",
+    "services":["Bathtub installation","Drain installation","Faucet installation","Garbage disposal installation","Gas line installation","Hot water recirculation pump installation","HVAC installation or replacement","HVAC system maintenance","Plumbing installation or replacement","Sewer installation","Shower installation","Sink installation","Sump pump installation","Toilet installation","Water heater installation","Water pipe installation","Bathtub repair","Drain repair","Faucet repair","Garbage disposal repair","Gas line repair","Hot water recirculation pump repair","HVAC system repair","Plumbing inspection","Plumbing repair","Sewer repair","Shower repair","Sink repair","Sump pump repair","Toilet repair","Water heater repair","Water pipe repair"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
+  },
+  {
+    "category":"plumbers","featured":false,
+    "name":"J. Blanton Plumbing, Sewer & Drain","slug":"j-blanton-plumbing-sewer-drain",
+    "phone":"(331) 330-7403","website":"https://jblantonplumbing.com",
+    "short_description":"J. Blanton Plumbing, Sewer & Drain",
+    "services":["Bathtub installation","Drain installation","Faucet installation","Garbage disposal installation","Gas line installation","Hot water recirculation pump installation","HVAC installation or replacement","HVAC system maintenance","Plumbing installation or replacement","Sewer installation","Shower installation","Sink installation","Sump pump installation","Toilet installation","Water heater installation","Water pipe installation","Bathtub repair","Drain repair","Faucet repair","Garbage disposal repair","Gas line repair","Hot water recirculation pump repair","HVAC system repair","Plumbing inspection","Plumbing repair","Sewer repair","Shower repair","Sink repair","Sump pump repair","Toilet repair","Water heater repair","Water pipe repair"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
+  },
+  {
+    "category":"plumbers","featured":false,
+    "name":"Marquise Plumbing and Backflow","slug":"marquise-plumbing-and-backflow",
+    "phone":"(630) 596-1915","website":"https://marquiseplumbers.com",
+    "short_description":"Marquise Plumbing and Backflow",
+    "services":["Bathtub installation","Drain installation","Faucet installation","Garbage disposal installation","Gas line installation","Hot water recirculation pump installation","HVAC installation or replacement","HVAC system maintenance","Plumbing installation or replacement","Sewer installation","Shower installation","Sink installation","Sump pump installation","Toilet installation","Water heater installation","Water pipe installation","Bathtub repair","Drain repair","Faucet repair","Garbage disposal repair","Gas line repair","Hot water recirculation pump repair","HVAC system repair","Plumbing inspection","Plumbing repair","Sewer repair","Shower repair","Sink repair","Sump pump repair","Toilet repair","Water heater repair","Water pipe repair"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
   },
   {
     "category":"electricians","featured":true,
-    "name":"Wheaton Wire & Light","slug":"wheaton-wire-and-light",
-    "phone":"(630) 555-2010","website":"https://example.com",
-    "short_description":"Panel upgrades, EV chargers, and lighting installs with fast scheduling.",
-    "services":["Panel upgrades","EV chargers","Lighting","Outlet repair"],
-    "service_areas":["Wheaton","Naperville","Glen Ellyn"],
-    "hours":"Mon–Fri 8–5","image":"/static/listings/electricians/wirelight.jpg","city":"Wheaton"
+    "name":"Reliant Naperville Electrician","slug":"reliant-naperville-electrician",
+    "phone":"(630) 742-4709","website":"https://naperville-commercialelectrician.com",
+    "short_description":"Reliant Naperville Electrician",
+    "services":["Electric inspection","Electric panel installation","Electric repair","Wire repair","Generator installation","Light fixture installation","Outlet installation","Electric installation or replacement","Electric panel repair","Wire installation","Electric vehicle charging station installation","Generator repair","Light fixture repair","Outlet repair"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
   },
   {
     "category":"electricians","featured":false,
-    "name":"Naperville Electric Co.","slug":"naperville-electric-co",
-    "phone":"(630) 555-2012","website":"https://example.com",
-    "short_description":"Residential and commercial electrical services with 24/7 emergency support.",
-    "services":["Rewiring","Code compliance","Ceiling fans","Troubleshooting"],
-    "service_areas":["Naperville","Aurora","Plainfield"],
-    "hours":"Mon–Sun 7–8","image":"/static/listings/electricians/naperville-electric.jpg","city":"Naperville"
+    "name":"Fail Safe Electric Company","slug":"fail-safe-electric-company",
+    "phone":"(630) 243-5833","website":"https://failsafeelectric.com",
+    "short_description":"Fail Safe Electric Company",
+    "services":["Electric inspection","Electric panel installation","Electric repair","Wire repair","Generator installation","Light fixture installation","Outlet installation","Electric installation or replacement","Electric panel repair","Wire installation","Electric vehicle charging station installation","Generator repair","Light fixture repair","Outlet repair"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
   },
+  {
+    "category":"electricians","featured":false,
+    "name":"A-Plus Electric","slug":"a-plus-electric",
+    "phone":"(630) 510-7311","website":"https://yournapervilleelectrician.net",
+    "short_description":"A-Plus Electric",
+    "services":["Electric inspection","Electric panel installation","Electric repair","Wire repair","Generator installation","Light fixture installation","Outlet installation","Electric installation or replacement","Electric panel repair","Wire installation","Electric vehicle charging station installation","Generator repair","Light fixture repair","Outlet repair"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
+  },
+  {
+    "category":"electricians","featured":false,
+    "name":"MJP Electrical Experts Inc","slug":"mjp-electrical-experts-inc",
+    "phone":"(630) 426-9006","website":"https://mjpelectricalexperts.com",
+    "short_description":"MJP Electrical Experts Inc",
+    "services":["Electric inspection","Electric panel installation","Electric repair","Wire repair","Generator installation","Light fixture installation","Outlet installation","Electric installation or replacement","Electric panel repair","Wire installation","Electric vehicle charging station installation","Generator repair","Light fixture repair","Outlet repair"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
+  },
+  {
+    "category":"electricians","featured":false,
+    "name":"Tritan Services LLC","slug":"tritan-services-llc",
+    "phone":"(630) 687-3335","website":"https://tritansecllc.com",
+    "short_description":"Tritan Services LLC",
+    "services":["Electric inspection","Electric panel installation","Electric repair","Wire repair","Generator installation","Light fixture installation","Outlet installation","Electric installation or replacement","Electric panel repair","Wire installation","Electric vehicle charging station installation","Generator repair","Light fixture repair","Outlet repair"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
+  },
+  {
+    "category":"electricians","featured":false,
+    "name":"VIP Electrical Services Inc.","slug":"vip-electrical-services-inc",
+    "phone":"(630) 551-8470","website":"",
+    "short_description":"VIP Electrical Services Inc.",
+    "services":["Electric inspection","Electric panel installation","Electric repair","Wire repair","Generator installation","Light fixture installation","Outlet installation","Electric installation or replacement","Electric panel repair","Wire installation","Electric vehicle charging station installation","Generator repair","Light fixture repair","Outlet repair"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
+  },
+  {
+    "category":"electricians","featured":false,
+    "name":"Precision Power Electric","slug":"precision-power-electric",
+    "phone":"(630) 806-1550","website":"https://precisionpowerelectricinc.com",
+    "short_description":"Precision Power Electric",
+    "services":["Electric inspection","Electric panel installation","Electric repair","Wire repair","Generator installation","Light fixture installation","Outlet installation","Electric installation or replacement","Electric panel repair","Wire installation","Electric vehicle charging station installation","Generator repair","Light fixture repair","Outlet repair"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
+  },
+  {
+    "category":"electricians","featured":false,
+    "name":"AArdvark Electric Service, Inc.","slug":"aardvark-electric-service-inc",
+    "phone":"(630) 796-1949","website":"https://aardvarkelectricservice.com",
+    "short_description":"AArdvark Electric Service, Inc.",
+    "services":["Electric inspection","Electric panel installation","Electric repair","Wire repair","Generator installation","Light fixture installation","Outlet installation","Electric installation or replacement","Electric panel repair","Wire installation","Electric vehicle charging station installation","Generator repair","Light fixture repair","Outlet repair"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
+  }
   {
     "category":"roofers","featured":true,
     "name":"DuPage Roofing Pros","slug":"dupage-roofing-pros",
