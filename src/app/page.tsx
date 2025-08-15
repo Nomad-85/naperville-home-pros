@@ -7,6 +7,7 @@ import CTASection from '@/components/CTASection';
 import { JsonLd } from '@/components/JsonLd';
 import categories from '@/data/categories.json';
 import listings from '@/data/listings.json';
+import blogPosts from '@/data/blog-posts.json';
 import { SEO_CONSTANTS } from '@/lib/seo';
 import { buildMetadata, buildViewport } from '@/components/SchemaMetadata';
 
@@ -27,30 +28,10 @@ export default function Home() {
     .filter(listing => listing.featured)
     .slice(0, 6);
   
-  // Get recent blog posts (placeholder for now)
-  const recentPosts = [
-    {
-      title: 'Top 10 Plumbers in Naperville (2025 Update)',
-      slug: 'top-10-plumbers-in-naperville-2025',
-      excerpt: 'Looking for a reliable plumber in Naperville? Our updated guide covers the top 10 plumbing companies with proven track records.',
-      date: '2025-07-28',
-      image: '/static/blog/plumbers-naperville.jpg',
-    },
-    {
-      title: 'How to Choose a Roofing Contractor in Wheaton',
-      slug: 'how-to-choose-a-roofing-contractor-in-wheaton',
-      excerpt: 'Selecting the right roofing contractor is crucial for your home. Learn what questions to ask and red flags to watch for.',
-      date: '2025-07-15',
-      image: '/static/blog/roofing-wheaton.jpg',
-    },
-    {
-      title: 'Naperville HVAC: Repair vs Replace — What to Know Before Winter',
-      slug: 'naperville-hvac-repair-vs-replace-guide',
-      excerpt: 'Is your furnace ready for winter? Learn when to repair and when to replace your HVAC system to avoid costly emergencies.',
-      date: '2025-07-01',
-      image: '/static/blog/hvac-winter.jpg',
-    },
-  ];
+  // Get recent blog posts from the blog-posts.json file
+  const recentPosts = blogPosts
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()) // Sort by date, newest first
+    .slice(0, 3); // Get the 3 most recent posts
 
   return (
     <>
