@@ -4,8 +4,8 @@
     "name":"Andersen Plumbing & Heating","slug":"andersen-plumbing-and-heating",
     "phone":"(630) 277-9849","website":"https://andersenph.com/",
     "short_description":"For over three decades, Andersen Plumbing & Heating has been the go-to name for the Fox Valley area’s reliable plumbing, heating, and air conditioning services. Established in 1985, we have built a strong reputation for quality workmanship, integrity, and unmatched expertise in the industry. As your trusted local contractor, we are committed to delivering efficient solutions and exceptional customer service for every project – big or small.",
-    "services":["Emergency leaks","Water heaters","Drain cleaning","Sump pumps"],
-    "service_areas":["Naperville","Wheaton","Lisle"],
+    "services":["Bathtub installation","Drain installation","Faucet installation","Garbage disposal installation","Gas line installation","Hot water recirculation pump installation","HVAC installation or replacement","HVAC system maintenance","Plumbing installation or replacement","Sewer installation","Shower installation","Sink installation","Sump pump installation","Toilet installation","Water heater installation","Water pipe installation","Bathtub repair","Drain repair","Faucet repair","Garbage disposal repair","Gas line repair","Hot water recirculation pump repair","HVAC system repair","Plumbing inspection","Plumbing repair","Sewer repair","Shower repair","Sink repair","Sump pump repair","Toilet repair","Water heater repair","Water pipe repair"],
+    "service_areas":["Naperville","Wheaton"],
     "hours":"Mon–Sun Open 24 hours","image":"/static/listings/plumbers/andersen-plumbing-heating-logo.webp","city":"Aurora"
   },
   {
@@ -13,8 +13,8 @@
     "name":"S and J Plumbing & Sewer","slug":"s-and-j-plumbing-and-sewer",
     "phone":"(224) 328-1183","website":"https://www.sandjplumbing.com/",
     "short_description":"S and J Plumbing greatly values its customers. As a leader in the plumbing industry, we strive to bring superior plumbing service by means of our employees, products, and technical skills. I would like to personally thank our current and future customers for trusting us with their health and homes as well as those of their families, friends, and neighbors. Customer satisfaction is our number one priority. If for any reason, you are not satisfied with our work we will do whatever it takes to make it right, I guarantee it! No fine print here, just a confident company with a knack for customer satisfaction.",
-    "services":["Drain cleaning","Sewer camera","Toilet repair"],
-    "service_areas":["Naperville","Warrenville"],
+    "services":["Bathtub installation","Drain installation","Faucet installation","Garbage disposal installation","Gas line installation","Hot water recirculation pump installation","HVAC installation or replacement","HVAC system maintenance","Plumbing installation or replacement","Sewer installation","Shower installation","Sink installation","Sump pump installation","Toilet installation","Water heater installation","Water pipe installation","Bathtub repair","Drain repair","Faucet repair","Garbage disposal repair","Gas line repair","Hot water recirculation pump repair","HVAC system repair","Plumbing inspection","Plumbing repair","Sewer repair","Shower repair","Sink repair","Sump pump repair","Toilet repair","Water heater repair","Water pipe repair"],
+    "service_areas":["Naperville","Wheaton"],
     "hours":"Mon–Sun Open 24 hours","image":"/static/listings/plumbers/s-and-j-plumbing-logo.webp","city":"Arlington Heights"
   },
   {
@@ -22,18 +22,45 @@
     "name":"Courtesy Plumbing","slug":"courtesy-plumbing",
     "phone":"(877) 797-5430","website":"https://www.plungeit.com/",
     "short_description":"Ken Mounts founded courtesy Plumbing in 1972 with the sole goal of priding cost-effective and personable plumbing services to residents in the Bollingbrook and Romeoville area. Our goals have not changed over the years. However, our company, abilities, and 5-star reviews have increased considerably.",
-    "services":["Drain cleaning","Sewer camera","Toilet repair"],
-    "service_areas":["Naperville","Warrenville"],
+    "services":["Bathtub installation","Drain installation","Faucet installation","Garbage disposal installation","Gas line installation","Hot water recirculation pump installation","HVAC installation or replacement","HVAC system maintenance","Plumbing installation or replacement","Sewer installation","Shower installation","Sink installation","Sump pump installation","Toilet installation","Water heater installation","Water pipe installation","Bathtub repair","Drain repair","Faucet repair","Garbage disposal repair","Gas line repair","Hot water recirculation pump repair","HVAC system repair","Plumbing inspection","Plumbing repair","Sewer repair","Shower repair","Sink repair","Sump pump repair","Toilet repair","Water heater repair","Water pipe repair"],
+    "service_areas":["Naperville","Wheaton"],
     "hours":"Mon–Sun Open 24 hours","image":"/static/listings/plumbers/courtest-plumbing-logo.webp","city":"Bollingbrook"
+  },
+  {
+    "category":"plumbers","featured":false,
+    "name":"OC Property Solutions Heating, Cooling, Plumbing, & Electric","slug":"oc-property-solutions",
+    "phone":"(630) 233-9892","website":"https://ocpropertysolutions.com/",
+    "short_description":"OC Property Solutions Heating, Cooling, Plumbing, & Electric is a family-owned and operated company that provides a wide range of services to residential and commercial clients in the Naperville area. Our team of experienced professionals is dedicated to delivering top-notch service and solutions to meet the needs of our customers.",
+    "services":["Bathtub installation","Drain installation","Faucet installation","Garbage disposal installation","Gas line installation","Hot water recirculation pump installation","HVAC installation or replacement","HVAC system maintenance","Plumbing installation or replacement","Sewer installation","Shower installation","Sink installation","Sump pump installation","Toilet installation","Water heater installation","Water pipe installation","Bathtub repair","Drain repair","Faucet repair","Garbage disposal repair","Gas line repair","Hot water recirculation pump repair","HVAC system repair","Plumbing inspection","Plumbing repair","Sewer repair","Shower repair","Sink repair","Sump pump repair","Toilet repair","Water heater repair","Water pipe repair"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/listings/plumbers/oc-property-solutions-logo.webp","city":"Plainfield"
   },
   {
     "category":"plumbers","featured":false,
     "name":"Arco Plumbing","slug":"arco-plumbing",
     "phone":"(630) 960-5950","website":"https://www.arcoplumbing.com/",
     "short_description":"Your life will be much easier when you have a plumber you can call upon dependably. That is Arco Plumbing to our customers in Westmont, Illinois. Our plumbing company serves the suburbs and business districts. Founded in 1978 and a BBB A+ rated business since 1985, we’ve built a tradition of service to our customers. Whether it’s plumbing emergencies for commercial clients or over-the-phone assistance for residents—we’re always there when someone needs us.",
-    "services":["Drain cleaning","Sewer camera","Toilet repair"],
-    "service_areas":["Naperville","Warrenville"],
+    "services":["Bathtub installation","Drain installation","Faucet installation","Garbage disposal installation","Gas line installation","Hot water recirculation pump installation","HVAC installation or replacement","HVAC system maintenance","Plumbing installation or replacement","Sewer installation","Shower installation","Sink installation","Sump pump installation","Toilet installation","Water heater installation","Water pipe installation","Bathtub repair","Drain repair","Faucet repair","Garbage disposal repair","Gas line repair","Hot water recirculation pump repair","HVAC system repair","Plumbing inspection","Plumbing repair","Sewer repair","Shower repair","Sink repair","Sump pump repair","Toilet repair","Water heater repair","Water pipe repair"],
+    "service_areas":["Naperville","Wheaton"],
     "hours":"Mon–Sun Open 24 hours","image":"/static/listings/plumbers/arco-plumbing-logo.webp","city":"Westmont"
+  },
+  {
+    "category":"plumbers","featured":false,
+    "name":"Leto Plumbing & Heating, Inc.","slug":"leto-plumbing-and-heating",
+    "phone":"(815) 393-5505","website":"https://letoplumbing.com",
+    "short_description":"Leto Plumbing & Heating, Inc.",
+    "services":["Bathtub installation","Drain installation","Faucet installation","Garbage disposal installation","Gas line installation","Hot water recirculation pump installation","HVAC installation or replacement","HVAC system maintenance","Plumbing installation or replacement","Sewer installation","Shower installation","Sink installation","Sump pump installation","Toilet installation","Water heater installation","Water pipe installation","Bathtub repair","Drain repair","Faucet repair","Garbage disposal repair","Gas line repair","Hot water recirculation pump repair","HVAC system repair","Plumbing inspection","Plumbing repair","Sewer repair","Shower repair","Sink repair","Sump pump repair","Toilet repair","Water heater repair","Water pipe repair"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/listings/plumbers/oc-property-solutions-logo.webp","city":"Plainfield"
+  },
+  {
+    "category":"plumbers","featured":false,
+    "name":"Wiz Plumbing Inc.","slug":"wiz-plumbing-inc",
+    "phone":"(630) 362-3330","website":"https://wizplumbingandsewer.com",
+    "short_description":"Wiz Plumbing Inc.",
+    "services":["Bathtub installation","Drain installation","Faucet installation","Garbage disposal installation","Gas line installation","Hot water recirculation pump installation","HVAC installation or replacement","HVAC system maintenance","Plumbing installation or replacement","Sewer installation","Shower installation","Sink installation","Sump pump installation","Toilet installation","Water heater installation","Water pipe installation","Bathtub repair","Drain repair","Faucet repair","Garbage disposal repair","Gas line repair","Hot water recirculation pump repair","HVAC system repair","Plumbing inspection","Plumbing repair","Sewer repair","Shower repair","Sink repair","Sump pump repair","Toilet repair","Water heater repair","Water pipe repair"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/listings/plumbers/oc-property-solutions-logo.webp","city":"Naperville"
   },
   {
     "category":"electricians","featured":true,
