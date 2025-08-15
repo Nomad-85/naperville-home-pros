@@ -44,7 +44,7 @@
     "category": "plumbing",
     "excerpt": "Our updated guide to the top plumbing companies in Naperville for 2025, featuring trusted providers with proven track records and reliable service.",
     "content": "Finding the right plumber in Naperville can make the difference between a quick, cost-effective fix and a drawn-out, expensive repair. In this 2025 update, we highlight ten of the highest-rated plumbers in the area, based on customer reviews, service range, availability, and overall quality. Whether you need emergency leak repairs, water heater replacement, or a full plumbing remodel, these professionals stand out in expertise and customer care.\n\n**1. Company One Plumbing** — Known for rapid emergency response and transparent pricing.\n**2. AquaFlow Solutions** — Specializes in eco-friendly plumbing systems and water-saving fixtures.\n**3. ...**\n\n(Continue with details for each plumber and tips for choosing the right one.)",
-    "image": "/images/blog/plumbers-2025.jpg",
+    "image": "/static/og-default.jpg",
     "tags": ["Plumbing", "Naperville", "Home Services"]
   },
   {
@@ -56,7 +56,7 @@
     "category": "roofing",
     "excerpt": "A step-by-step guide to finding a reliable, high-quality roofing contractor in Wheaton, Illinois.",
     "content": "Your roof is one of the most important investments in your home. Selecting the right contractor in Wheaton ensures that your project is done on time, within budget, and with lasting quality. In this article, we cover:\n- How to verify licenses and insurance\n- Checking references and online reviews\n- Comparing estimates and warranties\n- Understanding roofing materials and installation processes\n\nWe also include a shortlist of reputable Wheaton roofing companies to consider for your next project.",
-    "image": "/images/blog/roofing-wheaton.jpg",
+    "image": "/static/og-default.jpg",
     "tags": ["Roofing", "Wheaton", "Home Improvement"]
   },
   {
@@ -68,7 +68,7 @@
     "category": "hvac",
     "excerpt": "Wondering whether to repair or replace your HVAC system before winter? Here's how to make the right call.",
     "content": "As the cold season approaches in Naperville, many homeowners face the decision: repair an aging HVAC system or replace it entirely. This guide walks you through key considerations:\n- Age and efficiency of your current system\n- Cost comparison of repairs vs. replacement\n- Energy savings from new models\n- Timing and available rebates\n\nWe also share a list of trusted local HVAC contractors who can assess your system and provide honest recommendations before the first frost hits.",
-    "image": "/images/blog/hvac-repair-replace.jpg",
+    "image": "/static/og-default.jpg",
     "tags": ["HVAC", "Naperville", "Winter Prep"]
   }
 ]
