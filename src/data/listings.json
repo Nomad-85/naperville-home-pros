@@ -9,7 +9,7 @@
     "hours":"Mon–Sun Open 24 hours","image":"/static/listings/plumbers/andersen-plumbing-heating-logo.webp","city":"Aurora"
   },
   {
-    "category":"plumbers","featured":false,
+    "category":"plumbers","featured":true,
     "name":"S and J Plumbing & Sewer","slug":"s-and-j-plumbing-and-sewer",
     "phone":"(224) 328-1183","website":"https://www.sandjplumbing.com/",
     "short_description":"S and J Plumbing greatly values its customers. As a leader in the plumbing industry, we strive to bring superior plumbing service by means of our employees, products, and technical skills. I would like to personally thank our current and future customers for trusting us with their health and homes as well as those of their families, friends, and neighbors. Customer satisfaction is our number one priority. If for any reason, you are not satisfied with our work we will do whatever it takes to make it right, I guarantee it! No fine print here, just a confident company with a knack for customer satisfaction.",
@@ -172,110 +172,524 @@
   },
   {
     "category":"roofers","featured":true,
-    "name":"DuPage Roofing Pros","slug":"dupage-roofing-pros",
-    "phone":"(630) 555-3010","website":"https://example.com",
-    "short_description":"Asphalt, cedar, and flat roof specialists. Free inspections.",
-    "services":["Roof replacement","Repair","Storm damage"],
-    "service_areas":["Naperville","Wheaton","Aurora"],
-    "hours":"Mon–Fri 8–6","image":"/static/listings/roofers/dupage.jpg","city":"Naperville"
+    "name":"Naperville Roofing and Construction","slug":"naperville-roofing-and-construction",
+    "phone":"(630) 541-4998","website":"https://napervilleroofingandconstruction.com",
+    "short_description":"Naperville Roofing and Construction",
+    "services":["Balcony addition","Bedroom remodeling","Garage remodeling","Kitchen remodeling","Laundry room remodeling","New structure construction","Roof inspection","Roof repair","Reroofing","Bathroom addition","Common area addition","Kitchen addition","Siding installation","Siding replacement","Bathroom remodeling","Building additions","Patio, porch, or terrace construction","Landscaping building construction","Detached garage construction","Remodeling","New roof installation","Roof replacement","New room addition","Bedroom addition","Garage addition","Laundry room addition","Siding repair","Skylight installation"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
   },
   {
     "category":"roofers","featured":false,
-    "name":"Wheaton Roof Masters","slug":"wheaton-roof-masters",
-    "phone":"(630) 555-3012","website":"https://example.com",
-    "short_description":"Family-owned roofing company with 20+ years of experience.",
-    "services":["Shingle roofing","Metal roofing","Gutters","Siding"],
-    "service_areas":["Wheaton","Winfield","Carol Stream"],
-    "hours":"Mon–Sat 7–5","image":"/static/listings/roofers/wheaton-masters.jpg","city":"Wheaton"
+    "name":"Rusco Windows & Doors","slug":"rusco-windows-doors",
+    "phone":"(630) 206-4607","website":"https://rusco-windows.com",
+    "short_description":"Rusco Windows & Doors",
+    "services":["Balcony addition","Bedroom remodeling","Garage remodeling","Kitchen remodeling","Laundry room remodeling","New structure construction","Roof inspection","Roof repair","Reroofing","Bathroom addition","Common area addition","Kitchen addition","Siding installation","Siding replacement","Bathroom remodeling","Building additions","Patio, porch, or terrace construction","Landscaping building construction","Detached garage construction","Remodeling","New roof installation","Roof replacement","New room addition","Bedroom addition","Garage addition","Laundry room addition","Siding repair","Skylight installation"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Downers Grove"
+  },
+  {
+    "category":"roofers","featured":false,
+    "name":"Advantex Roofing & Restoration Inc","slug":"advantex-roofing-restoration-inc",
+    "phone":"(464) 224-0082","website":"https://advantexrestoration.com",
+    "short_description":"Advantex Roofing & Restoration Inc",
+    "services":["Balcony addition","Bedroom remodeling","Garage remodeling","Kitchen remodeling","Laundry room remodeling","New structure construction","Roof inspection","Roof repair","Reroofing","Bathroom addition","Common area addition","Kitchen addition","Siding installation","Siding replacement","Bathroom remodeling","Building additions","Patio, porch, or terrace construction","Landscaping building construction","Detached garage construction","Remodeling","New roof installation","Roof replacement","New room addition","Bedroom addition","Garage addition","Laundry room addition","Siding repair","Skylight installation"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Oswego"
+  },
+  {
+    "category":"roofers","featured":false,
+    "name":"Showalter Roofing Services","slug":"showalter-roofing-services",
+    "phone":"(630) 499-7700","website":"https://showalterroofing.com",
+    "short_description":"Showalter Roofing Services",
+    "services":["Balcony addition","Bedroom remodeling","Garage remodeling","Kitchen remodeling","Laundry room remodeling","New structure construction","Roof inspection","Roof repair","Reroofing","Bathroom addition","Common area addition","Kitchen addition","Siding installation","Siding replacement","Bathroom remodeling","Building additions","Patio, porch, or terrace construction","Landscaping building construction","Detached garage construction","Remodeling","New roof installation","Roof replacement","New room addition","Bedroom addition","Garage addition","Laundry room addition","Siding repair","Skylight installation"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
+  },
+  {
+    "category":"roofers","featured":false,
+    "name":"Walton Contractors","slug":"walton-contractors",
+    "phone":"(708) 303-8055","website":"https://walton-contractors.com",
+    "short_description":"Walton Contractors",
+    "services":["Balcony addition","Bedroom remodeling","Garage remodeling","Kitchen remodeling","Laundry room remodeling","New structure construction","Roof inspection","Roof repair","Reroofing","Bathroom addition","Common area addition","Kitchen addition","Siding installation","Siding replacement","Bathroom remodeling","Building additions","Patio, porch, or terrace construction","Landscaping building construction","Detached garage construction","Remodeling","New roof installation","Roof replacement","New room addition","Bedroom addition","Garage addition","Laundry room addition","Siding repair","Skylight installation"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
+  },
+  {
+    "category":"roofers","featured":false,
+    "name":"Happy Roofing","slug":"happy-roofing",
+    "phone":"(630) 234-8331","website":"https://happyroofing.com",
+    "short_description":"Happy Roofing",
+    "services":["Balcony addition","Bedroom remodeling","Garage remodeling","Kitchen remodeling","Laundry room remodeling","New structure construction","Roof inspection","Roof repair","Reroofing","Bathroom addition","Common area addition","Kitchen addition","Siding installation","Siding replacement","Bathroom remodeling","Building additions","Patio, porch, or terrace construction","Landscaping building construction","Detached garage construction","Remodeling","New roof installation","Roof replacement","New room addition","Bedroom addition","Garage addition","Laundry room addition","Siding repair","Skylight installation"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
+  },
+  {
+    "category":"roofers","featured":false,
+    "name":"Greater Chicago Roofing","slug":"greater-chicago-roofing",
+    "phone":"(630) 864-6586","website":"https://greaterchicagoroofing.com",
+    "short_description":"Greater Chicago Roofing",
+    "services":["Balcony addition","Bedroom remodeling","Garage remodeling","Kitchen remodeling","Laundry room remodeling","New structure construction","Roof inspection","Roof repair","Reroofing","Bathroom addition","Common area addition","Kitchen addition","Siding installation","Siding replacement","Bathroom remodeling","Building additions","Patio, porch, or terrace construction","Landscaping building construction","Detached garage construction","Remodeling","New roof installation","Roof replacement","New room addition","Bedroom addition","Garage addition","Laundry room addition","Siding repair","Skylight installation"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
+  },
+  {
+    "category":"roofers","featured":false,
+    "name":"Storm Guard of Naperville","slug":"storm-guard-of-naperville",
+    "phone":"(630) 354-0836","website":"https://stormguardrc.com",
+    "short_description":"Storm Guard of Naperville",
+    "services":["Balcony addition","Bedroom remodeling","Garage remodeling","Kitchen remodeling","Laundry room remodeling","New structure construction","Roof inspection","Roof repair","Reroofing","Bathroom addition","Common area addition","Kitchen addition","Siding installation","Siding replacement","Bathroom remodeling","Building additions","Patio, porch, or terrace construction","Landscaping building construction","Detached garage construction","Remodeling","New roof installation","Roof replacement","New room addition","Bedroom addition","Garage addition","Laundry room addition","Siding repair","Skylight installation"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
+  },
+  {
+    "category":"roofers","featured":false,
+    "name":"Perfect Exteriors Inc.","slug":"perfect-exteriors-inc",
+    "phone":"(708) 969-1392","website":"https://perfectexteriorsinc.com",
+    "short_description":"Perfect Exteriors Inc.",
+    "services":["Balcony addition","Bedroom remodeling","Garage remodeling","Kitchen remodeling","Laundry room remodeling","New structure construction","Roof inspection","Roof repair","Reroofing","Bathroom addition","Common area addition","Kitchen addition","Siding installation","Siding replacement","Bathroom remodeling","Building additions","Patio, porch, or terrace construction","Landscaping building construction","Detached garage construction","Remodeling","New roof installation","Roof replacement","New room addition","Bedroom addition","Garage addition","Laundry room addition","Siding repair","Skylight installation"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
+  },
+  {
+    "category":"roofers","featured":false,
+    "name":"J & P Parci Roofing","slug":"j-p-parci-roofing",
+    "phone":"(630) 857-6688","website":"https://jpparciroofing.com",
+    "short_description":"J & P Parci Roofing",
+    "services":["Balcony addition","Bedroom remodeling","Garage remodeling","Kitchen remodeling","Laundry room remodeling","New structure construction","Roof inspection","Roof repair","Reroofing","Bathroom addition","Common area addition","Kitchen addition","Siding installation","Siding replacement","Bathroom remodeling","Building additions","Patio, porch, or terrace construction","Landscaping building construction","Detached garage construction","Remodeling","New roof installation","Roof replacement","New room addition","Bedroom addition","Garage addition","Laundry room addition","Siding repair","Skylight installation"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
   },
   {
     "category":"hvac","featured":true,
-    "name":"Naperville Heating & Air","slug":"naperville-heating-and-air",
-    "phone":"(630) 555-4008","website":"https://example.com",
-    "short_description":"Heating, cooling, and air quality experts serving DuPage County.",
-    "services":["Furnace repair","AC installation","Maintenance plans","Air purification"],
-    "service_areas":["Naperville","Lisle","Woodridge"],
-    "hours":"Mon–Sun 8–8","image":"/static/listings/hvac/naperville-heating.jpg","city":"Naperville"
+    "name":"Air-Rite Heating & Cooling, Inc.","slug":"air-rite-heating-cooling-inc",
+    "phone":"(630) 966-8100","website":"https://www.air-rite.com",
+    "short_description":"Air-Rite Heating & Cooling, Inc.",
+    "services":["HVAC installation or replacement","HVAC system repair","HVAC system maintenance"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
   },
   {
     "category":"hvac","featured":false,
-    "name":"River City HVAC","slug":"river-city-hvac",
-    "phone":"(630) 555-4010","website":"https://example.com",
-    "short_description":"AC repair, furnace tune-ups, and indoor air quality.",
-    "services":["AC repair","Furnace","Tune-ups","IAQ"],
-    "service_areas":["Naperville","Wheaton","Bolingbrook"],
-    "hours":"Mon–Sun 7–7","image":"/static/listings/hvac/rivercity.jpg","city":"Naperville"
+    "name":"Energy Services Air Conditioning & Heating Co. & Electrical","slug":"energy-services-air-conditioning-heating-co-electrical",
+    "phone":"(224) 452-4595","website":"https://energyserv.com",
+    "short_description":"Energy Services Air Conditioning & Heating Co. & Electrical",
+    "services":["HVAC installation or replacement","HVAC system repair","HVAC system maintenance"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
+  },
+  {
+    "category":"hvac","featured":false,
+    "name":"A All Temp Inc. Heating & Cooling","slug":"a-all-temp-inc-heating-cooling",
+    "phone":"(630) 355-4474","website":"https://aalltemp.com",
+    "short_description":"A All Temp Inc. Heating & Cooling",
+    "services":["HVAC installation or replacement","HVAC system repair","HVAC system maintenance"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
+  },
+  {
+    "category":"hvac","featured":false,
+    "name":"Four Suns Heating & Cooling, Inc.","slug":"four-suns-heating-cooling-inc",
+    "phone":"(630) 753-9410","website":"https://foursunsheatingandcooling.com",
+    "short_description":"Four Suns Heating & Cooling, Inc.",
+    "services":["HVAC installation or replacement","HVAC system repair","HVAC system maintenance"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
+  },
+  {
+    "category":"hvac","featured":false,
+    "name":"Nortek Environmental","slug":"nortek-environmental",
+    "phone":"(630) 548-1500","website":"https://www.nortekenvironmental.com",
+    "short_description":"Nortek Environmental",
+    "services":["HVAC installation or replacement","HVAC system repair","HVAC system maintenance"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
+  },
+  {
+    "category":"hvac","featured":false,
+    "name":"Harmonic Heating & Air Conditioning, Plumbing & Electric","slug":"harmonic-heating-air-conditioning-plumbing-electric",
+    "phone":"(630) 999-9008","website":"https://www.harmonichvac.com",
+    "short_description":"Harmonic Heating & Air Conditioning, Plumbing & Electric",
+    "services":["HVAC installation or replacement","HVAC system repair","HVAC system maintenance"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
+  },
+  {
+    "category":"hvac","featured":false,
+    "name":"Dutchman Heating and Cooling Inc.","slug":"dutchman-heating-and-cooling-inc",
+    "phone":"(630) 961-2220","website":"https://www.dutchmanheating.com",
+    "short_description":"Dutchman Heating and Cooling Inc.",
+    "services":["HVAC installation or replacement","HVAC system repair","HVAC system maintenance"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
+  },
+  {
+    "category":"hvac","featured":false,
+    "name":"First Care Heating & Air","slug":"first-care-heating-air",
+    "phone":"(630) 934-2273","website":"https://www.firstcareheatingandair.com",
+    "short_description":"First Care Heating & Air",
+    "services":["HVAC installation or replacement","HVAC system repair","HVAC system maintenance"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
+  },
+  {
+    "category":"hvac","featured":false,
+    "name":"All Seasons AC, Furnace & Water Heater","slug":"all-seasons-ac-furnace-water-heater",
+    "phone":"(630) 349-5260","website":"https://allseasons24-7.com",
+    "short_description":"All Seasons AC, Furnace & Water Heater",
+    "services":["HVAC installation or replacement","HVAC system repair","HVAC system maintenance"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
+  },
+  {
+    "category":"hvac","featured":false,
+    "name":"Leipart Heating and Cooling","slug":"leipart-heating-and-cooling",
+    "phone":"(630) 581-2110","website":"https://leipartheatingandcooling.com",
+    "short_description":"Leipart Heating and Cooling",
+    "services":["HVAC installation or replacement","HVAC system repair","HVAC system maintenance"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
   },
   {
     "category":"landscapers","featured":true,
-    "name":"Green Valley Landscaping","slug":"green-valley-landscaping",
-    "phone":"(630) 555-5008","website":"https://example.com",
-    "short_description":"Complete landscape design, installation, and maintenance services.",
-    "services":["Landscape design","Hardscaping","Irrigation","Lawn care"],
-    "service_areas":["Naperville","Wheaton","Aurora"],
-    "hours":"Mon–Fri 7–6, Sat 8–4","image":"/static/listings/landscapers/green-valley.jpg","city":"Naperville"
+    "name":"Ware Landscaping & Snow Removal","slug":"ware-landscaping-snow-removal",
+    "phone":"(312) 626-8707","website":"https://warelandscaping.com",
+    "short_description":"Ware Landscaping & Snow Removal",
+    "services":["Gardening","Exterior wall construction","Retaining walls","Walkway construction or installation","Landscape design","Landscaping building construction","Construction or installation","Disease management - shrubs","Shrub planting","Shrub removal","Snow removal","Driveway construction or installation","Interior wall construction","Patio, porch, or terrace construction","Landscape construction or installation","Landscape maintenance","Lawn care","Shrub care","Insect management - shrubs","Shrub pruning or trimming","Shrub transplanting"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
   },
   {
     "category":"landscapers","featured":false,
-    "name":"Prairie Path Landscaping","slug":"prairie-path-landscaping",
-    "phone":"(630) 555-5010","website":"https://example.com",
-    "short_description":"Mowing, cleanups, mulch, seasonal color.",
-    "services":["Weekly mowing","Mulch","Cleanups","Planting"],
-    "service_areas":["Naperville","Wheaton","Winfield"],
-    "hours":"Mon–Sat 8–6","image":"/static/listings/landscapers/prairiepath.jpg","city":"Naperville"
+    "name":"Montano's Landscaping","slug":"montano-s-landscaping",
+    "phone":"(630) 271-9709","website":"https://www.montanoslandscaping.com",
+    "short_description":"Montano's Landscaping",
+    "services":["Gardening","Exterior wall construction","Retaining walls","Walkway construction or installation","Landscape design","Landscaping building construction","Construction or installation","Disease management - shrubs","Shrub planting","Shrub removal","Snow removal","Driveway construction or installation","Interior wall construction","Patio, porch, or terrace construction","Landscape construction or installation","Landscape maintenance","Lawn care","Shrub care","Insect management - shrubs","Shrub pruning or trimming","Shrub transplanting"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
+  },
+  {
+    "category":"landscapers","featured":false,
+    "name":"Western DuPage Landscaping, Inc.","slug":"western-dupage-landscaping-inc",
+    "phone":"(630) 416-0072","website":"https://www.westerndupagelandscaping.com",
+    "short_description":"Western DuPage Landscaping, Inc.",
+    "services":["Gardening","Exterior wall construction","Retaining walls","Walkway construction or installation","Landscape design","Landscaping building construction","Construction or installation","Disease management - shrubs","Shrub planting","Shrub removal","Snow removal","Driveway construction or installation","Interior wall construction","Patio, porch, or terrace construction","Landscape construction or installation","Landscape maintenance","Lawn care","Shrub care","Insect management - shrubs","Shrub pruning or trimming","Shrub transplanting"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
+  },
+  {
+    "category":"landscapers","featured":false,
+    "name":"Jeff's Premier Landscaping","slug":"jeff-s-premier-landscaping",
+    "phone":"(630) 381-7767","website":"https://jeffspremierlandscaping.com",
+    "short_description":"Jeff's Premier Landscaping",
+    "services":["Gardening","Exterior wall construction","Retaining walls","Walkway construction or installation","Landscape design","Landscaping building construction","Construction or installation","Disease management - shrubs","Shrub planting","Shrub removal","Snow removal","Driveway construction or installation","Interior wall construction","Patio, porch, or terrace construction","Landscape construction or installation","Landscape maintenance","Lawn care","Shrub care","Insect management - shrubs","Shrub pruning or trimming","Shrub transplanting"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
+  },
+  {
+    "category":"landscapers","featured":false,
+    "name":"C B Conlin Landscapes Inc","slug":"c-b-conlin-landscapes-inc",
+    "phone":"(630) 416-8998","website":"https://www.cbconlin.com",
+    "short_description":"C B Conlin Landscapes Inc",
+    "services":["Gardening","Exterior wall construction","Retaining walls","Walkway construction or installation","Landscape design","Landscaping building construction","Construction or installation","Disease management - shrubs","Shrub planting","Shrub removal","Snow removal","Driveway construction or installation","Interior wall construction","Patio, porch, or terrace construction","Landscape construction or installation","Landscape maintenance","Lawn care","Shrub care","Insect management - shrubs","Shrub pruning or trimming","Shrub transplanting"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
+  },
+  {
+    "category":"landscapers","featured":false,
+    "name":"JR's Creative Landscaping","slug":"jr-s-creative-landscaping",
+    "phone":"(630) 978-7300","website":"https://www.jrscreative.com",
+    "short_description":"JR's Creative Landscaping",
+    "services":["Gardening","Exterior wall construction","Retaining walls","Walkway construction or installation","Landscape design","Landscaping building construction","Construction or installation","Disease management - shrubs","Shrub planting","Shrub removal","Snow removal","Driveway construction or installation","Interior wall construction","Patio, porch, or terrace construction","Landscape construction or installation","Landscape maintenance","Lawn care","Shrub care","Insect management - shrubs","Shrub pruning or trimming","Shrub transplanting"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
+  },
+  {
+    "category":"landscapers","featured":false,
+    "name":"Green Shark Landscaping of Naperville","slug":"green-shark-landscaping-of-naperville",
+    "phone":"(779) 279-6477","website":"https://greensharklandscaping.com",
+    "short_description":"Green Shark Landscaping of Naperville",
+    "services":["Gardening","Exterior wall construction","Retaining walls","Walkway construction or installation","Landscape design","Landscaping building construction","Construction or installation","Disease management - shrubs","Shrub planting","Shrub removal","Snow removal","Driveway construction or installation","Interior wall construction","Patio, porch, or terrace construction","Landscape construction or installation","Landscape maintenance","Lawn care","Shrub care","Insect management - shrubs","Shrub pruning or trimming","Shrub transplanting"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
+  },
+  {
+    "category":"landscapers","featured":false,
+    "name":"Willow Glen Lawn & Landscape, Inc.","slug":"willow-glen-lawn-landscape-inc",
+    "phone":"(630) 742-8460","website":"https://willowglenlandscape.com",
+    "short_description":"Willow Glen Lawn & Landscape, Inc.",
+    "services":["Gardening","Exterior wall construction","Retaining walls","Walkway construction or installation","Landscape design","Landscaping building construction","Construction or installation","Disease management - shrubs","Shrub planting","Shrub removal","Snow removal","Driveway construction or installation","Interior wall construction","Patio, porch, or terrace construction","Landscape construction or installation","Landscape maintenance","Lawn care","Shrub care","Insect management - shrubs","Shrub pruning or trimming","Shrub transplanting"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
+  },
+  {
+    "category":"landscapers","featured":false,
+    "name":"First Cut Landscape Inc","slug":"first-cut-landscape-inc",
+    "phone":"(630) 546-9897","website":"https://firstcutlandscape.com",
+    "short_description":"First Cut Landscape Inc",
+    "services":["Gardening","Exterior wall construction","Retaining walls","Walkway construction or installation","Landscape design","Landscaping building construction","Construction or installation","Disease management - shrubs","Shrub planting","Shrub removal","Snow removal","Driveway construction or installation","Interior wall construction","Patio, porch, or terrace construction","Landscape construction or installation","Landscape maintenance","Lawn care","Shrub care","Insect management - shrubs","Shrub pruning or trimming","Shrub transplanting"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
+  },
+  {
+    "category":"landscapers","featured":false,
+    "name":"Prestige Outdoors Co","slug":"prestige-outdoors-co",
+    "phone":"(773) 600-6270","website":"https://prestigeoutdoorsco.com",
+    "short_description":"Prestige Outdoors Co",
+    "services":["Gardening","Exterior wall construction","Retaining walls","Walkway construction or installation","Landscape design","Landscaping building construction","Construction or installation","Disease management - shrubs","Shrub planting","Shrub removal","Snow removal","Driveway construction or installation","Interior wall construction","Patio, porch, or terrace construction","Landscape construction or installation","Landscape maintenance","Lawn care","Shrub care","Insect management - shrubs","Shrub pruning or trimming","Shrub transplanting"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
   },
   {
     "category":"painters","featured":true,
-    "name":"Riverwalk Painting Co.","slug":"riverwalk-painting-co",
-    "phone":"(630) 555-6010","website":"https://example.com",
-    "short_description":"Interior & exterior painting with clean, on-time crews.",
-    "services":["Interior","Exterior","Cabinet refinishing"],
-    "service_areas":["Naperville","Wheaton","Downers Grove"],
-    "hours":"Mon–Fri 8–5","image":"/static/listings/painters/riverwalk.jpg","city":"Naperville"
+    "name":"Improovy Painters of Naperville","slug":"improovy-painters-of-naperville",
+    "phone":"(630) 454-0422","website":"https://www.improovy.com",
+    "short_description":"Improovy Painters of Naperville",
+    "services":["Drywall installation or replacement","Exterior trim or molding painting","Interior wall painting","Painting exterior elements","Painting interior elements","Paint removal","Interior staining","Wall patching","Wall finish installation or replacement","Wallpaper installation","Drywall repair","Interior trim or molding painting","Exterior painting","Interior painting","Room painting","Exterior staining","Room staining","Wall finish repair","Wall texturing","Wallpaper removal"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
   },
   {
     "category":"painters","featured":false,
-    "name":"Wheaton Color Experts","slug":"wheaton-color-experts",
-    "phone":"(630) 555-6012","website":"https://example.com",
-    "short_description":"Premium painting services with color consultation included.",
-    "services":["Residential","Commercial","Color consulting","Drywall repair"],
-    "service_areas":["Wheaton","Glen Ellyn","Winfield"],
-    "hours":"Mon–Fri 8–6","image":"/static/listings/painters/wheaton-color.jpg","city":"Wheaton"
+    "name":"Jung Family Painting","slug":"jung-family-painting",
+    "phone":"(630) 527-9990","website":"https://jungfamilypainting.com",
+    "short_description":"Jung Family Painting",
+    "services":["Drywall installation or replacement","Exterior trim or molding painting","Interior wall painting","Painting exterior elements","Painting interior elements","Paint removal","Interior staining","Wall patching","Wall finish installation or replacement","Wallpaper installation","Drywall repair","Interior trim or molding painting","Exterior painting","Interior painting","Room painting","Exterior staining","Room staining","Wall finish repair","Wall texturing","Wallpaper removal"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
   },
   {
-    "category":"flooring","featured":true,
-    "name":"Naperville Floors & More","slug":"naperville-floors-and-more",
-    "phone":"(630) 555-7008","website":"https://example.com",
-    "short_description":"Quality flooring installation with lifetime installation warranty.",
-    "services":["Hardwood","Laminate","Tile","Carpet"],
-    "service_areas":["Naperville","Lisle","Plainfield"],
-    "hours":"Mon–Sat 9–6, Sun 11–4","image":"/static/listings/flooring/naperville-floors.jpg","city":"Naperville"
+    "category":"painters","featured":false,
+    "name":"CertaPro Painters of Naperville, IL","slug":"certapro-painters-of-naperville-il",
+    "phone":"(630) 541-9055","website":"https://certapro.com",
+    "short_description":"CertaPro Painters of Naperville, IL",
+    "services":["Drywall installation or replacement","Exterior trim or molding painting","Interior wall painting","Painting exterior elements","Painting interior elements","Paint removal","Interior staining","Wall patching","Wall finish installation or replacement","Wallpaper installation","Drywall repair","Interior trim or molding painting","Exterior painting","Interior painting","Room painting","Exterior staining","Room staining","Wall finish repair","Wall texturing","Wallpaper removal"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
+  },
+  {
+    "category":"painters","featured":false,
+    "name":"Paint Lab Inc","slug":"paint-lab-inc",
+    "phone":"(331) 213-1512","website":"https://www.facebook.com",
+    "short_description":"Paint Lab Inc",
+    "services":["Drywall installation or replacement","Exterior trim or molding painting","Interior wall painting","Painting exterior elements","Painting interior elements","Paint removal","Interior staining","Wall patching","Wall finish installation or replacement","Wallpaper installation","Drywall repair","Interior trim or molding painting","Exterior painting","Interior painting","Room painting","Exterior staining","Room staining","Wall finish repair","Wall texturing","Wallpaper removal"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
+  },
+  {
+    "category":"painters","featured":false,
+    "name":"Five Star Painting of Naperville","slug":"five-star-painting-of-naperville",
+    "phone":"(630) 538-7146","website":"https://www.fivestarpainting.com",
+    "short_description":"Five Star Painting of Naperville",
+    "services":["Drywall installation or replacement","Exterior trim or molding painting","Interior wall painting","Painting exterior elements","Painting interior elements","Paint removal","Interior staining","Wall patching","Wall finish installation or replacement","Wallpaper installation","Drywall repair","Interior trim or molding painting","Exterior painting","Interior painting","Room painting","Exterior staining","Room staining","Wall finish repair","Wall texturing","Wallpaper removal"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
+  },
+  {
+    "category":"painters","featured":false,
+    "name":"JC PRO Painters","slug":"jc-pro-painters",
+    "phone":"(630) 392-3647","website":"https://www.jcpropainters.com",
+    "short_description":"JC PRO Painters",
+    "services":["Drywall installation or replacement","Exterior trim or molding painting","Interior wall painting","Painting exterior elements","Painting interior elements","Paint removal","Interior staining","Wall patching","Wall finish installation or replacement","Wallpaper installation","Drywall repair","Interior trim or molding painting","Exterior painting","Interior painting","Room painting","Exterior staining","Room staining","Wall finish repair","Wall texturing","Wallpaper removal"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
+  },
+  {
+    "category":"painters","featured":false,
+    "name":"CWN Painting & Epoxy","slug":"cwn-painting-epoxy",
+    "phone":"(224) 637-4615","website":"",
+    "short_description":"CWN Painting & Epoxy",
+    "services":["Drywall installation or replacement","Exterior trim or molding painting","Interior wall painting","Painting exterior elements","Painting interior elements","Paint removal","Interior staining","Wall patching","Wall finish installation or replacement","Wallpaper installation","Drywall repair","Interior trim or molding painting","Exterior painting","Interior painting","Room painting","Exterior staining","Room staining","Wall finish repair","Wall texturing","Wallpaper removal"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
+  },
+  {
+    "category":"painters","featured":false,
+    "name":"Preferred Painting & Services","slug":"preferred-painting-services",
+    "phone":"(630) 440-6248","website":"https://www.preferredpainting1.com",
+    "short_description":"Preferred Painting & Services",
+    "services":["Drywall installation or replacement","Exterior trim or molding painting","Interior wall painting","Painting exterior elements","Painting interior elements","Paint removal","Interior staining","Wall patching","Wall finish installation or replacement","Wallpaper installation","Drywall repair","Interior trim or molding painting","Exterior painting","Interior painting","Room painting","Exterior staining","Room staining","Wall finish repair","Wall texturing","Wallpaper removal"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
+  },
+  {
+    "category":"painters","featured":false,
+    "name":"Titan Painting","slug":"titan-painting",
+    "phone":"(630) 605-3370","website":"https://titanpainting.com",
+    "short_description":"Titan Painting",
+    "services":["Drywall installation or replacement","Exterior trim or molding painting","Interior wall painting","Painting exterior elements","Painting interior elements","Paint removal","Interior staining","Wall patching","Wall finish installation or replacement","Wallpaper installation","Drywall repair","Interior trim or molding painting","Exterior painting","Interior painting","Room painting","Exterior staining","Room staining","Wall finish repair","Wall texturing","Wallpaper removal"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
+  },
+  {
+    "category":"painters","featured":false,
+    "name":"360 Painting of Naperville & St. Charles","slug":"360-painting-of-naperville-st-charles",
+    "phone":"(630) 884-8714","website":"https://www.360painting.com",
+    "short_description":"360 Painting of Naperville & St. Charles",
+    "services":["Drywall installation or replacement","Exterior trim or molding painting","Interior wall painting","Painting exterior elements","Painting interior elements","Paint removal","Interior staining","Wall patching","Wall finish installation or replacement","Wallpaper installation","Drywall repair","Interior trim or molding painting","Exterior painting","Interior painting","Room painting","Exterior staining","Room staining","Wall finish repair","Wall texturing","Wallpaper removal"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
   },
   {
     "category":"flooring","featured":false,
-    "name":"Fox Valley Flooring","slug":"fox-valley-flooring",
-    "phone":"(630) 555-7010","website":"https://example.com",
-    "short_description":"Hardwood, LVP, and carpet installation.",
-    "services":["Hardwood","LVP","Carpet","Stairs"],
-    "service_areas":["Naperville","Aurora","Wheaton"],
-    "hours":"Mon–Sat 9–5","image":"/static/listings/flooring/foxvalley.jpg","city":"Aurora"
+    "name":"Floor Covering Associates of Naperville","slug":"floor-covering-associates-of-naperville",
+    "phone":"(630) 369-8111","website":"",
+    "short_description":"Floor Covering Associates of Naperville",
+    "services":["Carpet installation","Floor installation","Floor restoration","Epoxy coating","Floor repair"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
+  },
+  {
+    "category":"flooring","featured":false,
+    "name":"Floor & Decor","slug":"floor-decor",
+    "phone":"(630) 449-1255","website":"https://www.flooranddecor.com",
+    "short_description":"Floor & Decor",
+    "services":["Carpet installation","Floor installation","Floor restoration","Epoxy coating","Floor repair"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
+  },
+  {
+    "category":"flooring","featured":true,
+    "name":"Great Western Flooring","slug":"great-western-flooring",
+    "phone":"(630) 357-3331","website":"https://greatwesternflooring.com",
+    "short_description":"Great Western Flooring",
+    "services":["Carpet installation","Floor installation","Floor restoration","Epoxy coating","Floor repair"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
+  },
+  {
+    "category":"flooring","featured":false,
+    "name":"Luna Flooring Gallery","slug":"luna-flooring-gallery",
+    "phone":"(708) 836-8936","website":"https://www.lunaflooringgallery.com",
+    "short_description":"Luna Flooring Gallery",
+    "services":["Carpet installation","Floor installation","Floor restoration","Epoxy coating","Floor repair"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
+  },
+  {
+    "category":"flooring","featured":false,
+    "name":"Best Buy Interior Finishes","slug":"best-buy-interior-finishes",
+    "phone":"(630) 791-5472","website":"https://bestbuyinteriorfinishes.com",
+    "short_description":"Best Buy Interior Finishes",
+    "services":["Carpet installation","Floor installation","Floor restoration","Epoxy coating","Floor repair"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
+  },
+  {
+    "category":"flooring","featured":false,
+    "name":"SCV Floorsmith","slug":"scv-floorsmith",
+    "phone":"(630) 825-8088","website":"",
+    "short_description":"SCV Floorsmith",
+    "services":["Carpet installation","Floor installation","Floor restoration","Epoxy coating","Floor repair"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
+  },
+  {
+    "category":"flooring","featured":false,
+    "name":"Hardwood Floor Refinishing by Bob","slug":"hardwood-floor-refinishing-by-bob",
+    "phone":"(331) 215-8775","website":"",
+    "short_description":"Hardwood Floor Refinishing by Bob",
+    "services":["Carpet installation","Floor installation","Floor restoration","Epoxy coating","Floor repair"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
+  },
+  {
+    "category":"flooring","featured":false,
+    "name":"All Tile - Carpet Cushions & Supplies","slug":"all-tile-carpet-cushions-supplies",
+    "phone":"(630) 369-2303","website":"",
+    "short_description":"All Tile - Carpet Cushions & Supplies",
+    "services":["Carpet installation","Floor installation","Floor restoration","Epoxy coating","Floor repair"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
+  },
+  {
+    "category":"flooring","featured":false,
+    "name":"Creative Floors, Inc","slug":"creative-floors-inc",
+    "phone":"(630) 537-1047","website":"https://creativefloorsinc.com",
+    "short_description":"Creative Floors, Inc",
+    "services":["Carpet installation","Floor installation","Floor restoration","Epoxy coating","Floor repair"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
+  },
+  {
+    "category":"flooring","featured":false,
+    "name":"ProSource of Naperville","slug":"prosource-of-naperville",
+    "phone":"(630) 296-9773","website":"https://www.prosourcewholesale.com",
+    "short_description":"ProSource of Naperville",
+    "services":["Carpet installation","Floor installation","Floor restoration","Epoxy coating","Floor repair"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
   },
   {
     "category":"remodeling","featured":true,
-    "name":"Naper Remodel & Design","slug":"naper-remodel-and-design",
-    "phone":"(630) 555-8010","website":"https://example.com",
-    "short_description":"Kitchens, baths, and basements with transparent timelines.",
-    "services":["Kitchens","Bathrooms","Basements"],
-    "service_areas":["Naperville","Wheaton","Lisle"],
-    "hours":"Mon–Fri 8–6","image":"/static/listings/remodeling/naperremodel.jpg","city":"Naperville"
+    "name":"Reliable Home Improvement and Supply, Inc.","slug":"reliable-home-improvement-and-supply-inc",
+    "phone":"(630) 579-6600","website":"https://reliablehomeimprovement.com",
+    "short_description":"Reliable Home Improvement and Supply, Inc.",
+    "services":["Bathroom remodeling","Kitchen remodeling","New room addition","Building additions","Remodeling"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
   },
   {
     "category":"remodeling","featured":false,
-    "name":"Wheaton Home Transformations","slug":"wheaton-home-transformations",
-    "phone":"(630) 555-8012","website":"https://example.com",
-    "short_description":"Full-service design-build firm specializing in whole-home renovations.",
-    "services":["Whole home","Additions","Kitchens","Outdoor living"],
-    "service_areas":["Wheaton","Glen Ellyn","Winfield"],
-    "hours":"Mon–Fri 9–5","image":"/static/listings/remodeling/wheaton-transformations.jpg","city":"Wheaton"
+    "name":"Bath Planet of Chicagoland","slug":"bath-planet-of-chicagoland",
+    "phone":"(630) 540-2023","website":"https://www.bathplanetofchicagoland.com",
+    "short_description":"Bath Planet of Chicagoland",
+    "services":["Bathroom remodeling","Kitchen remodeling","New room addition","Building additions","Remodeling"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
+  },
+  {
+    "category":"remodeling","featured":false,
+    "name":"The Kitchen Master","slug":"the-kitchen-master",
+    "phone":"(630) 791-3656","website":"https://www.thekitchenmaster.com",
+    "short_description":"The Kitchen Master",
+    "services":["Bathroom remodeling","Kitchen remodeling","New room addition","Building additions","Remodeling"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
+  },
+  {
+    "category":"remodeling","featured":false,
+    "name":"Craft Kitchen & Bath Remodeling","slug":"craft-kitchen-bath-remodeling",
+    "phone":"(224) 288-4154","website":"",
+    "short_description":"Craft Kitchen & Bath Remodeling",
+    "services":["Bathroom remodeling","Kitchen remodeling","New room addition","Building additions","Remodeling"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
+  },
+  {
+    "category":"remodeling","featured":false,
+    "name":"Kure Construction Illinois","slug":"kure-construction-illinois",
+    "phone":"(630) 306-7000","website":"",
+    "short_description":"Kure Construction Illinois",
+    "services":["Bathroom remodeling","Kitchen remodeling","New room addition","Building additions","Remodeling"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
+  },
+  {
+    "category":"remodeling","featured":false,
+    "name":"Naperville Home Remodeling","slug":"naperville-home-remodeling",
+    "phone":"(630) 576-3950","website":"",
+    "short_description":"Naperville Home Remodeling",
+    "services":["Bathroom remodeling","Kitchen remodeling","New room addition","Building additions","Remodeling"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
+  },
+  {
+    "category":"remodeling","featured":false,
+    "name":"Royal Contractors & Remodeling Inc.","slug":"royal-contractors-remodeling-inc",
+    "phone":"(630) 915-3344","website":"",
+    "short_description":"Royal Contractors & Remodeling Inc.",
+    "services":["Bathroom remodeling","Kitchen remodeling","New room addition","Building additions","Remodeling"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
+  },
+  {
+    "category":"remodeling","featured":false,
+    "name":"TMV Services – Licensed Handyman Service, Renovation & FHA 203k","slug":"tmv-services-licensed-handyman-service-renovation-fha-203k",
+    "phone":"(312) 690-1273","website":"",
+    "short_description":"TMV Services – Licensed Handyman Service, Renovation & FHA 203k",
+    "services":["Bathroom remodeling","Kitchen remodeling","New room addition","Building additions","Remodeling"],
+    "service_areas":["Naperville","Wheaton"],
+    "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
   }
 ]
