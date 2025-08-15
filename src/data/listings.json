@@ -169,7 +169,7 @@
     "services":["Electric inspection","Electric panel installation","Electric repair","Wire repair","Generator installation","Light fixture installation","Outlet installation","Electric installation or replacement","Electric panel repair","Wire installation","Electric vehicle charging station installation","Generator repair","Light fixture repair","Outlet repair"],
     "service_areas":["Naperville","Wheaton"],
     "hours":"Mon–Sun Open 24 hours","image":"/static/og-default.jpg","city":"Naperville"
-  }
+  },
   {
     "category":"roofers","featured":true,
     "name":"DuPage Roofing Pros","slug":"dupage-roofing-pros",
