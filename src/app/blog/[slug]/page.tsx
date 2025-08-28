@@ -129,10 +129,9 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
             </div>
             
             {/* Post Content */}
-            <div 
-              className="prose max-w-none"
-              dangerouslySetInnerHTML={{ __html: post.content }}
-            />
+            <div className="prose prose-lg max-w-none prose-headings:font-semibold prose-h2:text-2xl prose-h2:mt-8 prose-h2:mb-4 prose-h3:text-xl prose-h3:mt-6 prose-p:my-4 prose-ul:list-disc prose-ul:pl-6 prose-ol:list-decimal prose-ol:pl-6 prose-li:my-2 prose-a:text-blue-600 hover:prose-a:text-blue-800 prose-blockquote:border-l-4 prose-blockquote:border-gray-300 prose-blockquote:pl-4 prose-blockquote:italic">
+              <div dangerouslySetInnerHTML={{ __html: post.content }} />
+            </div>
             
             {/* Author Bio */}
             <div className="mt-12 p-6 bg-gray-50 rounded-lg">
