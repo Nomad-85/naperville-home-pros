@@ -35,7 +35,34 @@ module.exports = {
           950: '#020617',
         },
       },
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            color: theme('colors.gray.800'),
+            a: {
+              color: theme('colors.primary.600'),
+              textDecoration: 'underline',
+              fontWeight: '500',
+              '&:hover': { color: theme('colors.primary.700') },
+            },
+            h1: { color: theme('colors.gray.900') },
+            h2: { color: theme('colors.gray.900'), scrollMarginTop: '6rem' },
+            h3: { color: theme('colors.gray.900'), scrollMarginTop: '6rem' },
+            'ul > li::marker': { color: theme('colors.gray.400') },
+            'ol > li::marker': { color: theme('colors.gray.400') },
+            blockquote: {
+              fontStyle: 'italic',
+              color: theme('colors.gray.700'),
+              borderLeftColor: theme('colors.gray.300'),
+            },
+            strong: { color: theme('colors.gray.900') },
+            hr: { borderColor: theme('colors.gray.200') },
+          },
+        },
+      }),
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 }
