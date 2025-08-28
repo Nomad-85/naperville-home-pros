@@ -40,7 +40,12 @@ export async function generateMetadata({
     description: post.excerpt ?? "",
     path: `/blog/${post.slug}`,
     ogType: "article",
-    ogImage: post.image ? [`${post.image}`] : undefined,
+    image: post.image
+    ? {
+        url: `${SEO_CONSTANTS.DOMAIN}${post.image}`,
+        alt: post.title,
+      }
+    : undefined,
   });
 }
 
