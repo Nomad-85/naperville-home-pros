@@ -65,7 +65,7 @@ export default function ContactPage() {
                 </div>
                 <div className="ml-3 text-base text-gray-600">
                   <p className="font-medium text-gray-900">Phone</p>
-                  <p>(630) 555-0134</p>
+                  <p>(510) 316-7632</p>
                 </div>
               </div>
               <div className="flex items-start">
@@ -108,7 +108,22 @@ export default function ContactPage() {
           
           <div>
             <div className="bg-white p-8 rounded-lg shadow-md">
-              <form>
+              <form action="https://formspree.io/f/xrbapznd" method="POST">
+                {/* Hidden fields for Formspree */}
+                <input type="hidden" name="_subject" value="New Contact Form Submission" />
+                <input
+                  type="hidden"
+                  name="_redirect"
+                  value="https://napervillehomepros.com/contact/thank-you"
+                />
+                {/* Honeypot field for spam protection */}
+                <input
+                  type="text"
+                  name="_gotcha"
+                  style={{ display: 'none' }}
+                  aria-hidden="true"
+                  tabIndex={-1}
+                />
                 <div className="space-y-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
@@ -183,14 +198,14 @@ export default function ContactPage() {
           "url": `${SEO_CONSTANTS.DOMAIN}/contact`,
           "contactPoint": {
             "@type": "ContactPoint",
-            "telephone": "(630) 555-0134",
+            "telephone": "(510) 316-7632",
             "email": "hello@napervillehomepros.com",
             "contactType": "customer service"
           },
           "mainEntity": {
             "@type": "Organization",
             "name": "Naperville Home Pros",
-            "telephone": "(630) 555-0134",
+            "telephone": "(510) 316-7632",
             "email": "hello@napervillehomepros.com",
             "address": {
               "@type": "PostalAddress",

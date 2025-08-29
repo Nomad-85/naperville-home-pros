@@ -42,5 +42,5 @@ export const SEO_CONSTANTS = {
   DEFAULT_DESCRIPTION: 'Find trusted plumbers, electricians, roofers & more. Compare top local pros in Naperville & Wheaton. Feature your business today.',
   AREAS_SERVED: ['Naperville', 'Wheaton', 'DuPage County'],
   CONTACT_EMAIL: 'hello@napervillehomepros.com',
-  CONTACT_PHONE: '(630) 555-0134',
+  CONTACT_PHONE: '(510) 316-7632',
 };

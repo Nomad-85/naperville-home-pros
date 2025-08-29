@@ -142,7 +142,7 @@ export default function PrivacyPage() {
             Naperville Home Pros<br />
             Naperville, IL 60563<br />
             hello@napervillehomepros.com<br />
-            (630) 555-0134
+            (510) 316-7632
           </p>
         </div>
       </section>
