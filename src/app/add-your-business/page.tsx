@@ -178,7 +178,22 @@ export default function AddYourBusinessPage() {
               Apply to List Your Business
             </h2>
             <div className="bg-white p-8 rounded-lg shadow-md">
-              <form>
+              <form action="https://formspree.io/f/xrbapznd" method="POST">
+                {/* Hidden fields for Formspree */}
+                <input type="hidden" name="_subject" value="New Add Your Business Application" />
+                <input
+                  type="hidden"
+                  name="_redirect"
+                  value="https://napervillehomepros.com/add-your-business/thank-you"
+                />
+                {/* Honeypot field for spam protection */}
+                <input
+                  type="text"
+                  name="_gotcha"
+                  style={{ display: 'none' }}
+                  aria-hidden="true"
+                  tabIndex={-1}
+                />
                 <div className="space-y-6">
                   {/* Business Information */}
                   <div>
@@ -304,7 +319,7 @@ export default function AddYourBusinessPage() {
                         <input
                           type="email"
                           id="contact-email"
-                          name="contact-email"
+                          name="email"
                           className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
                           required
                         />
